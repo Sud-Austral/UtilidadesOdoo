@@ -237,7 +237,7 @@ div.ruby-menu-demo-bg-light, div.ruby-menu-demo-bg-dark {
 }
 
 div.ruby-menu-demo-bg-dark {
-    background: efefef
+    background:#efefef;
 }
 
 div.ruby-menu-demo-bg-light-c:after, div.ruby-menu-demo-bg-dark-c:after {
@@ -2462,6 +2462,7 @@ h5 {
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
         background: #555;
+        text-decoration:none;
     }
 
 /************************maraca agua query *****************************************************/

@@ -38,6 +38,9 @@ namespace AplicacionBlanco.Controllers
         {
             GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
             ViewBag.URL = graf.GetURL();
+
+
+            
             return View();
         }
 
