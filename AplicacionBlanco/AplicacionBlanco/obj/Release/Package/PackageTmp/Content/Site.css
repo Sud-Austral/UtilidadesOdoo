@@ -415,10 +415,6 @@ p {
 
 /*       LUIS             */
 
-#tituloCandidatos {
-    font-size: 3em !important;
-}
-
 @media screen and (max-width: 570px){
     #tituloCandidatos {
         font-size: 1em !important;
@@ -430,5 +426,10 @@ p {
 }
 
 
-    
+#tituloCandidatos {
+    font-size: 3em !important;
+    font-family: 'Roboto', sans-serif !important;
+    color: white;
+}
+   
 

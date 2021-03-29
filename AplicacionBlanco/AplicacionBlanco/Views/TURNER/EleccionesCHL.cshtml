@@ -28,8 +28,6 @@
     <meta name="twitter:title" content="Elecciones Chile">
     <meta name="twitter:description" content="Portal para visualizacion de datos de las Elecciones de Chile 2021">
     <meta name="twitter:image" content="~/Content/img/RRSS/logoDataElecciones.png">
-
-    <link href="~/Content/Impacto.css" rel="stylesheet" />
     <link rel="shortcut icon" href="~/Content/img/Icono_dataIntelligence_Rojo.svg">
     <link href="~/Content/fonts.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
@@ -47,7 +45,13 @@
 </head>
 
 <body style="background-color:black;">
-    <hr style="width:100%;border:40px solid #2494b4; margin-top:-24px;" />
+    @*
+        <hr style="width:100%;border:40px solid #2494b4; margin-top:-24px;" />
+    *@
+    <div class="panel panel-default">
+        <div class="panel-body" style="height:70px; background-color:#2494b4;margin-top:-24px;">
+        </div>
+    </div>
     <div style="display:none">
         <h1>Elecciones</h1>
         <h2>Chile</h2>
@@ -79,12 +83,14 @@
             <a href="https://www.facebook.com/dataintelligencecl" class="icon icon-facebook" target="_blank"></a>
             <a href="https://www.instagram.com/data.intelligence/?hl=es-la" class="icon icon-instagram" target="_blank"></a>
             <a href="https://twitter.com/data_int" class="icon icon-twitter" target="_blank"></a>
+
+            <a href="https://dataintelligence.store" class="icon icon-Icono_dataIntelligence_Rojo" target="_blank">
+                <span class="path1"></span><span class="path2"></span>
+            </a>
+
             @*
-                <a href="https://dataintelligence.store" class="icon icon-Icono_dataIntelligence_Rojo">
-                    <span class="path1"></span><span class="path2"></span>
-                </a>
+                <a href="https://dataintelligence.store" class="icon icon-shopify" target="_blank"></a>
             *@
-            <a href="https://dataintelligence.store" class="icon icon-shopify" target="_blank"></a>
             <a href="https://www.linkedin.com/in/data-intelligence-5916b41a5/" class="icon icon-linkedin" target="_blank"></a>
             <a href="https://www.youtube.com/channel/UCXo5Vhu65cOl3OcwWF9wLUA" class="icon icon-youtube" target="_blank"></a>
             <a href="@ViewBag.tiktok" class="icon icon-tiktok" target="_blank"></a>
@@ -97,7 +103,7 @@
         <div class="tab-pane active" id="inicio" role="tabpanel">
             <div class="container-fluid" style="">
                 <div class="row" style="">
-                    <div id="tituloCandidatos" class="col d-none d-lg-block  text-center" style="margin-top:10%">
+                    <div id="tituloCandidatos" class="col d-none d-sm-none   d-md-none  d-lg-block  text-center" style="margin-top:10%">
                         <span>
                             ELECCIONES CHILE <strong>∙</strong> 2021
                         </span>
@@ -107,25 +113,26 @@
                         </span>
                         <br />
                         <div style="margin-top:-2%">
+
                             <span>
-                                ____________________________
+                                _______________________
                             </span>
                         </div>
                     </div>
-                    <div class="col d-none d-md-block  d-lg-none text-center" style="margin-top:10%">
-                        <span style="font-size:2.6em;">
+                    <div id="tituloCandidatos" class="col d-none d-sm-block   d-md-block  d-lg-none text-center" style="margin-top:10%">
+                        <span style="font-size:1em !important;">
                             ELECCIONES CHILE <strong>∙</strong> 2021
                         </span>
                         <br />
-                        <span style="font-size:2.6em;">
+                        <span style="font-size:1em !important;">
                             CONOCE A LOS CANDIDATOS/AS
                         </span>
                         <br />
-                        <span style="font-size:2.6em;">
-                            ____________________________
+                        <span style="font-size:1em !important;">
+                            ___________________
                         </span>
                     </div>
-                    <div class="col d-block d-md-none text-center" style="margin-top:10%">
+                    <div id="tituloCandidatos" class="col d-block d-sm-none d-md-none text-center" style="margin-top:10%">
                         <span style="font-size:1.5em;">
                             ELECCIONES CHILE <strong>∙</strong> 2021
                         </span>
@@ -180,7 +187,10 @@
                     position: fixed;
                     left: 0;
                     bottom: 0;
-                    max-height: 11vh;
+                    /* Los vh son el porcentaje de la altura de pantalla que se esta mostrando, 100 vh seria la altura completa
+                            y los vw es lo mismo pero con el ancho
+                            max-height: 11vh;
+                        */
                     width: 100%;
                     overflow: hidden;
                     padding: 0.5%;
@@ -195,20 +205,18 @@
                         </div>
                         <div class=" col-6 d-none d-sm-block"  style="">
                             <img loading="lazy"
-                                 class="img-fluid float-right mt-5" style="max-height:5vh;" src="~/Content/img/RRSS/logoDataIntelligence.png" />
+                                 class="img-fluid float-right mt-5" style="max-height:5vh;margin-right:2em;" src="~/Content/img/RRSS/logoDataIntelligence.png" />
                         </div>
                     </div>
                 </div>
             </footer>
         </div>
-        <div class="tab-pane" id="alcaldes" role="tabpanel" style="margin-top:1vh">
-            <iframe loading="lazy" class="embed-responsive embed-responsive-16by9" id="powerbi1" style="margin: 0 auto; width: 100%; height: 95vh;" 
-                    src="https://app.powerbi.com/view?r=eyJrIjoiNjk1NTE1MzYtNzc4Zi00YjY5LTkxNjEtNzkyOTA4ZWRjMGI4IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9" ></iframe>
+        <div class="tab-pane" id="alcaldes" role="tabpanel">
+            <iframe loading="lazy" class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNjk1NTE1MzYtNzc4Zi00YjY5LTkxNjEtNzkyOTA4ZWRjMGI4IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9" frameborder="0"></iframe>
         </div>
 
-        <div class="tab-pane" id="concejales" role="tabpanel" style="margin-top:1vh">
-            <iframe loading="lazy" class="embed-responsive embed-responsive-16by9" id="powerbi2" style="margin: 0 auto; width: 100%; height: 95vh;" 
-                   src="https://app.powerbi.com/view?r=eyJrIjoiZTVmMzFjMzUtNzc2ZC00MmFjLTgzZGYtMzJmMjA2OTUwNjdjIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+        <div class="tab-pane" id="concejales" role="tabpanel">
+            <iframe loading="lazy" class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiZTVmMzFjMzUtNzc2ZC00MmFjLTgzZGYtMzJmMjA2OTUwNjdjIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9" frameborder="0"></iframe>
         </div>
 
         <div class="tab-pane" id="constituyentes" role="tabpanel" style="margin-top:1vh">
@@ -216,9 +224,9 @@
                    src="https://app.powerbi.com/view?r=eyJrIjoiNzI1ZWY2NDctNjFlMC00Nzc2LWI2NzAtOTkxZjE3NTI2MGU1IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"   frameborder="0"></iframe>
         </div>
 
-        <div class="tab-pane" id="puebloi" role="tabpanel" style="margin-top:1vh">
-            <iframe loading="lazy" class="embed-responsive embed-responsive-16by9" id="powerbi4" style="margin: 0 auto; width: 100%; height: 95vh;" 
-                   src="https://app.powerbi.com/view?r=eyJrIjoiODM4ZjIwOTQtY2IwZC00YzNhLWI1MzEtMzhjYmM0MDUwZjQ5IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9&pageName=ReportSection69d8522aa17783d88e04"  frameborder="0"></iframe>
+        <div class="tab-pane" id="puebloi" role="tabpanel">
+            <iframe loading="lazy" class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiODM4ZjIwOTQtY2IwZC00YzNhLWI1MzEtMzhjYmM0MDUwZjQ5IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9&pageName=ReportSection4b00cbbc8cfa1e36aaae" frameborder="0"></iframe>
         </div>
 
         <div class="tab-pane" id="gobernadores" role="tabpanel" style="margin-top:1vh">

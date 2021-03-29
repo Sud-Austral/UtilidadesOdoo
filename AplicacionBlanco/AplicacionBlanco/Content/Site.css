@@ -430,5 +430,9 @@ p {
 }
 
 
-    
+#tituloCandidatos {
+    font-family: 'Roboto', sans-serif !important;
+    color: white;
+}
+   
 
