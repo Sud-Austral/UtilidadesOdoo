@@ -34,10 +34,9 @@ namespace AplicacionBlanco.Controllers
             return View();
         }
 
-        public ActionResult Grafico(int id, string id2= "grafico", string id3 = "Geo_CL_provinces_.csv")
+        public ActionResult Grafico(int id)
         {
-            ViewBag.grafico = id2;
-            ViewBag.file = id3;
+           
             GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
             ViewBag.URL = graf.GetURL();
 
