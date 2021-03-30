@@ -243,7 +243,8 @@ p {
 }
 
 #activar ~ .contenedor .label:before {
-    content: "ABRIR MENU";
+    content: "ABRIR MENÚ";
+    font-family: Oswald;
 }
 
 #activar:checked ~ .contenedor,
@@ -256,7 +257,8 @@ p {
     }
 
     #activar:checked ~ .contenedor .label:before {
-        content: "CERRAR MENU";
+        content: "CERRAR MENÚ";
+
     }
 
     /*estilos test2 */
@@ -415,6 +417,10 @@ p {
 
 /*       LUIS             */
 
+#tituloCandidatos {
+    font-size: 3em !important;
+}
+
 @media screen and (max-width: 570px){
     #tituloCandidatos {
         font-size: 1em !important;
@@ -427,7 +433,6 @@ p {
 
 
 #tituloCandidatos {
-    font-size: 3em !important;
     font-family: 'Roboto', sans-serif !important;
     color: white;
 }

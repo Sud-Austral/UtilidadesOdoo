@@ -383,6 +383,7 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\Propios\PBPropio.js" />
     <Content Include="Scripts\Propios\Util.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
@@ -539,6 +540,7 @@
     <Content Include="Views\TURNER\EleccionesConstituyente.cshtml" />
     <Content Include="Views\TURNER\EleccionesConstituyentePubloI.cshtml" />
     <Content Include="Views\TURNER\EleccionesGobernador.cshtml" />
+    <Content Include="Views\TURNER\Carga.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

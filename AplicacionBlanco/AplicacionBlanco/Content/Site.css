@@ -243,7 +243,8 @@ p {
 }
 
 #activar ~ .contenedor .label:before {
-    content: "ABRIR MENU";
+    content: "ABRIR MENÚ";
+    font-family: Oswald;
 }
 
 #activar:checked ~ .contenedor,
@@ -256,7 +257,8 @@ p {
     }
 
     #activar:checked ~ .contenedor .label:before {
-        content: "CERRAR MENU";
+        content: "CERRAR MENÚ";
+
     }
 
     /*estilos test2 */
