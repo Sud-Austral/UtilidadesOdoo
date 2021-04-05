@@ -265,11 +265,17 @@
     <Content Include="Content\img\portadas\3.PNG" />
     <Content Include="Content\img\portadas\4.PNG" />
     <Content Include="Content\img\portadas\5.PNG" />
+    <Content Include="Content\img\portadas\botonAlcaldes-min.png" />
     <Content Include="Content\img\portadas\botonAlcaldes.png" />
+    <Content Include="Content\img\portadas\botonConcejales-min.png" />
     <Content Include="Content\img\portadas\botonConcejales.png" />
+    <Content Include="Content\img\portadas\botonConvencionalConstituyente-min.png" />
     <Content Include="Content\img\portadas\botonConvencionalConstituyente.png" />
+    <Content Include="Content\img\portadas\botonGobiernosRegionales-min.png" />
     <Content Include="Content\img\portadas\botonGobiernosRegionales.png" />
+    <Content Include="Content\img\portadas\botonPueblosIndigenas-min.png" />
     <Content Include="Content\img\portadas\botonPueblosIndigenas.png" />
+    <Content Include="Content\img\portadas\covihome-min.png" />
     <Content Include="Content\img\portadas\covihome.png" />
     <Content Include="Content\img\Porta_ISMT.jpg" />
     <Content Include="Content\img\resultados_Master_honduras.png" />
