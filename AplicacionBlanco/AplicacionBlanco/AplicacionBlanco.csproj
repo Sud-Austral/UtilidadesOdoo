@@ -48,10 +48,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -224,6 +224,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\fonts\fa-brands-400.svg" />
+    <Content Include="assets\fonts\fa-regular-400.svg" />
+    <Content Include="assets\fonts\fa-solid-900.svg" />
+    <Content Include="assets\fonts\fontawesome-all.min.css" />
+    <Content Include="assets\img\avatars\avatar1.jpeg" />
+    <Content Include="assets\img\avatars\avatar2.jpeg" />
+    <Content Include="assets\img\avatars\avatar3.jpeg" />
+    <Content Include="assets\img\avatars\avatar4.jpeg" />
+    <Content Include="assets\img\avatars\avatar5.jpeg" />
+    <Content Include="assets\img\dogs\image2.jpeg" />
+    <Content Include="assets\img\dogs\image3.jpeg" />
+    <Content Include="assets\js\bs-init.js" />
+    <Content Include="assets\js\chart.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\theme.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -367,6 +384,18 @@
     <Content Include="Content\fonts\icomoon.eot" />
     <Content Include="Content\fonts\icomoon.ttf" />
     <Content Include="Content\fonts\icomoon.woff" />
+    <Content Include="assets\fonts\fa-brands-400.eot" />
+    <Content Include="assets\fonts\fa-brands-400.ttf" />
+    <Content Include="assets\fonts\fa-brands-400.woff" />
+    <Content Include="assets\fonts\fa-brands-400.woff2" />
+    <Content Include="assets\fonts\fa-regular-400.eot" />
+    <Content Include="assets\fonts\fa-regular-400.ttf" />
+    <Content Include="assets\fonts\fa-regular-400.woff" />
+    <Content Include="assets\fonts\fa-regular-400.woff2" />
+    <Content Include="assets\fonts\fa-solid-900.eot" />
+    <Content Include="assets\fonts\fa-solid-900.ttf" />
+    <Content Include="assets\fonts\fa-solid-900.woff" />
+    <Content Include="assets\fonts\fa-solid-900.woff2" />
     <None Include="Properties\PublishProfiles\OdooUtil - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - Web Deploy.pubxml" />
@@ -547,6 +576,7 @@
     <Content Include="Views\TURNER\EleccionesConstituyentePubloI.cshtml" />
     <Content Include="Views\TURNER\EleccionesGobernador.cshtml" />
     <Content Include="Views\TURNER\Carga.cshtml" />
+    <Content Include="Views\TURNER\Carga2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
