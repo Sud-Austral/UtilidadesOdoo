@@ -22,12 +22,14 @@ namespace AplicacionBlanco.Controllers
             ViewBag.grafico = id2;
             ViewBag.file = id3;
             Graficos db = new Graficos();
-            ViewBag.Resultado = db.BuscarGrafico(1);
+            ViewBag.Resultado = db.BuscarGrafico(id);
 
 
             GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
             ViewBag.Elemento = graf;
-            var listaAsociado = dbGrafico.PRODUCTO.Where(x => x.SECTOR_id == graf.CATEGORIA.PRODUCTO.SECTOR_id).ToList();
+
+            // var listaAsociado = dbGrafico.PRODUCTO.Where(x => x.SECTOR_id == graf.CATEGORIA.PRODUCTO.SECTOR_id).ToList();
+            var listaAsociado = dbGrafico.GRAFICO.Where(x => x.CATEGORIA.PRODUCTO.SECTOR_id == graf.CATEGORIA.PRODUCTO.SECTOR_id).ToList();
             ViewBag.listaAsociado = listaAsociado;
             /* var listaOtrosContenidos = dbGrafico.CATEGORIA.Where(x => x.PRODUCTO_id == graf.CATEGORIA.PRODUCTO_id).ToList(); */
             //List<int> idproductos = new List<int>();
