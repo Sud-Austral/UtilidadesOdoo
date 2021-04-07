@@ -97,7 +97,6 @@
                     // expected output: ReferenceError: nonExistentFunction is not defined
                     // Note - error messages will vary depending on browser
                 }
-
             }
             google.charts.load('current', { 'packages': ['corechart'] });
             google.charts.setOnLoadCallback(drawChart);
@@ -108,7 +107,6 @@
                     title: 'Geomática Agrícola',
                     curveType: 'function',
                     legend: { position: 'bottom' }
-
                 };
 
                 var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
