@@ -22,7 +22,7 @@ namespace AplicacionBlanco.Controllers
             ViewBag.grafico = id2;
             ViewBag.file = id3;
             Graficos db = new Graficos();
-            ViewBag.Resultado = db.BuscarGrafico(id);
+            ViewBag.Resultado = null;  //db.BuscarGrafico(id);
 
 
             GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();

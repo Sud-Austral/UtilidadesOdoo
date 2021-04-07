@@ -577,6 +577,7 @@
     <Content Include="Views\TURNER\EleccionesGobernador.cshtml" />
     <Content Include="Views\TURNER\Carga.cshtml" />
     <Content Include="Views\TURNER\Carga2.cshtml" />
+    <Content Include="Views\TURNER\Carga3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
