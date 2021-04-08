@@ -3,8 +3,18 @@
     font-family: 'SourceSansPro-Bold';
     src: url('../Fonts/source-sans-pro/SourceSansPro-Bold.otf') format('opentype');
 }
-
-
+@font-face {
+    font-family: 'Myriad Pro Bold SemiExtended';
+    src: url('Font/Myriad Pro Bold SemiExtended.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Myriad Pro Black';
+    src: url('Font/Myriad Pro Black.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MYRIADPRO-REGULAR';
+    src: url('Font/MYRIADPRO-REGULAR.OTF') format('opentype');
+}
 body {
     overflow-x: hidden;
     font-size: 16px;
@@ -25,29 +35,28 @@ header {
 }
 
 main {
-    font-size:1rem;
+    font-size: 1rem;
     background-color: #fff;
     color: #000;
     padding: 40px 0;
-    box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);
+    /*box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);*/
     margin-bottom: 20px;
 }
 aside {
     background: #f0f3f5;
     color: #0d47a1;
     margin-left: 15px;
-    box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);
+    /*box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);*/
     margin-bottom: 20px;
 }
 .widgets {
     background: #f0f3f5;
     color: #424242;
     margin-bottom: 40px;
-    box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);
+    /*box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);*/
     box-sizing: border-box;
     width: 100%;
-    margin-left:1px;
-  
+    margin-left: 1px;
 }
 
 footer{
@@ -64,9 +73,10 @@ footer{
 
 /*seccion de precios*/
 section.pricing {
-    margin:0!important;
-    background: #007bff;
-    background: linear-gradient(to right, #0062E6, #33AEFF);
+    margin: 0 !important;
+    background-image: url('/Content/img/imagen_beneficiosNac_Inter895x430_POR2.jpg');
+    /* background: #007bff;
+   background: linear-gradient(to right, #0062E6, #33AEFF);*/
 }
 
 .pricing .card {
@@ -2373,7 +2383,7 @@ span.ruby-c-content {
 
 /*Seccion call to action*/
 .call-to-action {
-    background: #0086d2;
+   
     padding: 40px 0;
     margin-bottom:50px;
 }
@@ -2596,7 +2606,8 @@ h5 {
     #profile-grid .img-rounded {
         border-radius: 4px 4px 0 0;
     }
-
+/*
 .img-fluid:hover {
     filter: blur(5px);
 }
+    */
