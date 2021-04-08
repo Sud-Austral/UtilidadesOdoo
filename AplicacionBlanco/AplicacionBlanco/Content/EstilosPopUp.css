@@ -55,7 +55,8 @@ aside {
 #boton {
     margin-bottom: 20px;
     background-color: red;
-    -webkit-border-radius:20px;
+    border-radius:20px;
+    border:none;
 }
 
 footer{
