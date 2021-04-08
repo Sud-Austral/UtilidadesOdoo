@@ -55,71 +55,88 @@
 *@
 
 
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
-
+    @*
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />*@
+    <meta charset="iso-8859-1">
     <link href="~/Content/EstilosPopUp.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-   
+
     <script type="text/javascript">
-        
-        //
+
         url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Datos/" + "@ViewBag.URL";
+        
+        
+        //alert(encodeURIComponent("á-é-í´-ó-ú"));
+
+        //
+
+        //%C3%A1-%C3%A9-%C3%AD%C2%B4-%C3%B3-%C3%BA
         //alert(url);
         //url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Prueba/Nuevo%20documento%20de%20texto.csv";
         //alert(url);
-        $.get(url, function (data) {
+        $.get("/Grafico/GraficoString?id=@ViewBag.id", function (data) {
+        //$.get(url, function (data) {
+                        //data = data.replace("&#250;","ú")
+                        //alert(data);
+                        //data = encodeURIComponent(decodeURIComponent(encodeURIComponent(data)));
+                        var lines = data.split("\n");
+                        var a = lines[0].split(",");
 
-            var lines = data.split("\n");
-            var a = lines[0].split(",");
+                        var datos = [a];
+                        //var data = new google.visualization.DataTable();
+                        //data.addColumn('number', 'Day')
+                        for (var i = 1; i < lines.length; i++) {
+                            try {
+                                var listAux = [];
+                                var fila = lines[i].split(",");
+                                listAux.push(fila[0]);
+                                for (var j = 1; j < fila.length; j++) {
 
-            var datos = [a];
-            for (var i = 1; i < lines.length; i++) {
-                try {
-                    var listAux = [];
-                    var fila = lines[i].split(",");
-                    listAux.push(fila[0]);
-                    for (var j = 1; j < fila.length; j++) {
+                                    listAux.push(Number.parseFloat(fila[j]));
+                                }
+                                //alert(listAux);
+                                if (a.length == listAux.length) {
+                                    datos.push(listAux);
+                                }
 
-                        listAux.push(Number.parseFloat(fila[j]));
-                    }
-                    //alert(listAux);
-                    if (a.length == listAux.length) {
-                        datos.push(listAux);
-                    }
-
-                } catch (error) {
-                    //console.error(error);
-                    // expected output: ReferenceError: nonExistentFunction is not defined
-                    // Note - error messages will vary depending on browser
-                }
-
-            }
+                            } catch (error) {
+                                //console.error(error);
+                                // expected output: ReferenceError: nonExistentFunction is not defined
+                                // Note - error messages will vary depending on browser
+                            }
+                        }
             google.charts.load('current', { 'packages': ['corechart'] });
+            google.charts.load('current', { 'packages': ['line'] });
             google.charts.setOnLoadCallback(drawChart);
+            //document.getElementById("Hola").innerText = datos; 
+            //alert(datos);
             function drawChart() {
                 var data = google.visualization.arrayToDataTable(datos);
 
                 var options = {
-                    title: 'Geomática Agrícola',
+                    //title: 'Geomática Agrícola',
                     curveType: 'function',
                     legend: { position: 'bottom' }
+            };
 
-                };
-
-                var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-                chart.draw(data, options);
+            //var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+                var chart = new google.charts.Line(document.getElementById('curve_chart'));
+            chart.draw(data, options);
             }
         });
 
         window.addEventListener("resize", function () {
             // tu código aquí
-            $.get(url, function (data) {
+            //$.get(url, function (data) {
+            $.get("/Grafico/GraficoString?id=@ViewBag.id", function (data) {
                 var lines = data.split("\n");
                 var a = lines[0].split(",");
                 var datos = [a];
@@ -149,13 +166,11 @@
                     var data = google.visualization.arrayToDataTable(datos);
 
                     var options = {
-                        title: 'Geomática Agrícola',
+                        //title: 'Geomática Agrícola',
                         curveType: 'function',
                         legend: { position: 'bottom' }
                     };
-
                     var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
                     chart.draw(data, options);
                 }
             });
@@ -190,7 +205,7 @@
             title: 'Test de descarga',
             width: 600
         });
-    
+
     </script>
 </head>
 

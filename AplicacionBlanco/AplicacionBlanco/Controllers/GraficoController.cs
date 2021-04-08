@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -34,18 +35,34 @@ namespace AplicacionBlanco.Controllers
             return View();
         }
 
-        public ActionResult Grafico(int id)
+        public ActionResult Grafico(int id = 0)
         {
-           
+            
             GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
             ViewBag.URL = graf.GetURL();
-
+            ViewBag.id = graf.id;
+            ViewBag.Data = Util.ObtenerTexto("https://raw.githubusercontent.com/Sud-Austral/MPG/main/Datos/" + graf.GetURL());
             return View();
         }
 
-        public ActionResult Grafico2(string id)
+        public string GraficoString(int id = 0)
         {
-            ViewBag.URL = id;
+
+            GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
+            ViewBag.URL = graf.GetURL();
+            //ViewBag.Data = Util.ObtenerTexto("https://raw.githubusercontent.com/Sud-Austral/MPG/main/Datos/" + graf.GetURL())[4];
+            string Hola = graf.GetURL();
+            return Util.ObtenerTexto("https://raw.githubusercontent.com/Sud-Austral/MPG/main/Datos/" + graf.GetURL());
+            //return Hola;
+        }
+
+        public ActionResult Grafico2(int id = 0)
+        {
+
+            GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
+            ViewBag.URL = graf.GetURL();
+            ViewBag.id = graf.id;
+            ViewBag.Data = Util.ObtenerTexto("https://raw.githubusercontent.com/Sud-Austral/MPG/main/Datos/" + graf.GetURL());
 
             return View ();
         }
@@ -56,29 +73,45 @@ namespace AplicacionBlanco.Controllers
             return View();
         }
 
-        public ActionResult Grafico3(string id)
+        public ActionResult Grafico3(int id = 0)
         {
-            ViewBag.URL = id;
+
+            GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
+            ViewBag.URL = graf.GetURL();
+            ViewBag.id = graf.id;
+            ViewBag.Data = Util.ObtenerTexto("https://raw.githubusercontent.com/Sud-Austral/MPG/main/Datos/" + graf.GetURL());
 
             return View();
         }
 
-        public ActionResult Grafico4(string id)
+        public ActionResult Grafico4(int id = 0)
         {
-            ViewBag.URL = id;
+
+            GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
+            ViewBag.URL = graf.GetURL();
+            ViewBag.id = graf.id;
+            ViewBag.Data = Util.ObtenerTexto("https://raw.githubusercontent.com/Sud-Austral/MPG/main/Datos/" + graf.GetURL());
 
             return View();
         }
 
-        public ActionResult Grafico5(string id)
+        public ActionResult Grafico5(int id = 0)
         {
-            ViewBag.URL = id;
+
+            GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
+            ViewBag.URL = graf.GetURL();
+            ViewBag.id = graf.id;
+            ViewBag.Data = Util.ObtenerTexto("https://raw.githubusercontent.com/Sud-Austral/MPG/main/Datos/" + graf.GetURL());
 
             return View();
         }
-        public ActionResult Grafico6(string id)
+        public ActionResult Grafico6(int id = 0)
         {
-            ViewBag.URL = id;
+
+            GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
+            ViewBag.URL = graf.GetURL();
+            ViewBag.id = graf.id;
+            ViewBag.Data = Util.ObtenerTexto("https://raw.githubusercontent.com/Sud-Austral/MPG/main/Datos/" + graf.GetURL());
 
             return View();
         }
@@ -97,6 +130,17 @@ namespace AplicacionBlanco.Controllers
         public ActionResult mapa(string id = "Geo_CL_provinces_.csv")
         {
             ViewBag.URL = id;
+            return View();
+        }
+
+        public ActionResult readText()
+        {
+            /*
+            List<string> listaTextoP = s.Split(new[] { "\n" },
+                                            StringSplitOptions.RemoveEmptyEntries).ToList();
+            */
+            //ViewBag.URL = s.Split(new[] { "\n" }).Length; //"áéíóú";
+            //ViewBag.URL = listaTextoP.Count();
             return View();
         }
 

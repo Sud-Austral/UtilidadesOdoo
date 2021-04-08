@@ -66,6 +66,12 @@ namespace AplicacionBlanco.Controllers
             return View();
         }
 
+        public ActionResult Index3()
+        {
+            ViewBag.Twitter = "@data_int";
+            return View();
+        }
+
         public ActionResult mapa(int id = 6, string id2 = "mapa")
         {
             ViewBag.grafico = id2;
