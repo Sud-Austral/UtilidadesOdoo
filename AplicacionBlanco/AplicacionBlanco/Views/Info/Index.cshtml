@@ -42,14 +42,28 @@
     </script>
 </head>
 
-<body>
-
-    
-    <header>
-       
-        <div class="ruby-menu-demo-header row">
+<body style="font-family: 'MYRIADPRO-REGULAR' " >
+    <style>
+        h6{
+            font-size:17px;
+        }
+        h5{
+            font-size:15px;
+        }
+        h4{
+            font-size:14px;
+        }
+        h2{
+            font-size:34px;
+        }
+        p{
+            font-size:17px;
+        }
+    </style>
+    <header style="border:none;">
+        <div class="ruby-menu-demo-header row" style="background-color:#000; font-family: 'MYRIADPRO-REGULAR';">
             <!-- COMIENZO: MEGAMENU HORIZONTAL -->
-            <div class="ruby-wrapper">
+            <div class="ruby-wrapper" style="background-color:#000; font-family:">
                 <button class="c-hamburger c-hamburger--htx visible-xs">
                     <span>toggle menu</span>
                 </button>
@@ -684,16 +698,40 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col">
+            <div class="col-7 align-content-end">
+                <h2>@ViewBag.Elemento.titulo</h2>
+            </div>
+            @*
+            <div class="col-5">
+                <h2>@ViewBag.Elemento.titulo</h2>
+            </div>
+*@
+            <div class="col-5">
 
                 @*<h3>@ViewBag.Resultado.TITULO</h3>*@
-
-                <h3>@ViewBag.Elemento.titulo</h3>
+                <div id="carouselExample2" class="carousel slide" data-ride="carousel" data-interval="9000">
+                    <div class="carousel-inner  w-50 mx-auto" role="listbox">
+                        <div class="carousel-item   active">
+                            <img class="img-fluid " alt="100%x280" src="~/Content/iconos_PopUp/bloggif_6050eb8030715.png" />
+                        </div>
+                        <div class="carousel-item ">
+                            <img class="img-fluid " alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 text-center " style="max-width:100%">
+                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExample2" role="button" data-slide="prev">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <a class="btn btn-primary mb-3 " href="#carouselExample2" role="button" data-slide="next">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
 
         <!--descargar pdf iframe-->
-        <button style="cursor: -webkit-grab; cursor: grab;">Descargar PDF</button>
+        <button style="cursor: -webkit-grab; cursor: grab; margin-bottom:10px;">Descargar PDF</button>
         <script type="text/javascript">
             $("button").click(function () {
                 var myIframe = document.getElementById("inlineFrameExample").contentWindow;
@@ -704,7 +742,9 @@
         </script>
      
         <section class="contenedor-main row">
-            <main class="col-md-7 ml-md-3">
+            
+            <main class="col-md-7 ml-md-3" style="border:1px solid #808080; border-radius:10px;" >
+                
                 <!--Iframe de grafico-->
                 <iframe id="inlineFrameExample"
                         style="width:100%;height:100%;"
@@ -715,20 +755,65 @@
                             string rutaGrafico = "/Grafico/" + ViewBag.Elemento.TIPO_GRAFICO.nombre + "?id=" + ViewBag.Elemento.id;// "&id=3=" + ViewBag.file;
                         }
                         src="@rutaGrafico">
-                           
                 </iframe>
-                        
+                <div class="row no-gutters" style="color:blue; font-size:10px; ">
+                    <div class="col-md-2 col-2 text-center mt-2 mb-5" style="border-right:1px solid #d9d9d9;">
+                        <a href="#"><span >Ver información</span></a> 
+                    </div>
+                    <div class=" col-md-1 col-1 text-center mt-2 mb-5 ml-md-1 mr-md-1" style="border-right:1px solid #d9d9d9;">
+                        <a href="#"><span>Ver fuentes</span></a> 
+                    
+                    </div>
+                    <div class="col-md-1 col-1 text-center mt-2 mb-5 ml-md-1 mr-md-1" style="border-right:1px solid #d9d9d9;">
+                        <a href="#"><span>Ver en Pdf</span></a>  
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-6 text-md-right " style="border-right:1px solid #d9d9d9;">
+                                <span style="color:#d9d9d9; font-size:11px;">
+                                    Desarrolado por <br />   
+                                </span>
+                                <span style="color:#d9d9d9; font-size:11px;">
+                                    Data Intelligence Internacional
+                                </span>
+                            </div>
+                            <div class="col-5 mb-1">
+                                <img class="img-fluid pull-right  mx-0" src="~/Content/img/negro-rojo-trans - copia.png" alt="Logo transparente" />
+                            </div>
+                        </div>
+                            
+                    </div>
+                </div>
+
+
+                @*<div class="row no-gutters" style="color:blue; font-size:12px; ">
+                    <div class="col-md-5 col-12 text-left mt-md-2 mt-0">
+                        <a class="mr-2" href="#"><span>Ver información</span></a><span>|</span><a class="mr-2 ml-2 mb-3" href="#"><span>Ver fuentes</span></a>|<a class="mr-2 ml-2 mb-3" href="#"><span>Ver fuentes</span></a> |
+                    </div>
+                    <div class="col-md-4 col-6  text-right pr-md-2" style="color:#d9d9d9; border-right: 1.5px solid #d9d9d9">
+                        <span>Desarrollado por </span> <br />
+                        <span style="margin-top:-20px;">Data Intelligence International</span>
+                    </div>
+                    <div class="col-md-3 col-6  m-b-5 mb-md-0 text-left">
+                        <img class="img-fluid mx-0 pull-right" style="width:100%;" src="~/Content/img/negro-rojo-trans - copia.png" alt="Alternate Text" />
+                    </div>
+
+
+                </div>
+                *@
+
+
             </main>
            
-            <aside class="col-md-4 align-self-start">
+            <aside class="col-md-4 align-self-start" style=" background-color: white">
                 <!--efecto flotante de esta seccion-->
                 <div class="sticky-top" style="z-index:1;">
-                    <h6 style="margin:8px;">Descargas</h6>
-                    <section style="background:#fff;">
+                    <h6 style="margin:8px; color:black; "><strong>∙</strong> Descargar informe</h6>
+                    <section style="background:#fff; border-radius:15px; background-color:#f0f3f5;">
                         <div class="contenedor ">
-                            <div class="row  d-sm-flex mx-sm-auto" style="padding:10px;">
-                                <div class=" col-6 col-md-2 text-center ">
-                                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal" data-backdrop="false"><img src="~/Content/iconos_PopUp/pdf_download.png" /></button>
+                            <div class="row d-sm-flex mx-sm-auto" style="padding:10px; margin-bottom:10px;">
+                                <div class=" col-6 col-md-3 text-center ">
+                                    <button type="button" class="btn2"  data-toggle="modal" data-target="#myModal" data-backdrop="false"><img class="img-fluid" src="~/Content/img/boton_archivo_pdf.png" /></button>
                                     <!-- Modal -->
                                     <div class="modal " id="myModal" role="dialog">
                                         <div class="modal-dialog modal-lg">
@@ -818,8 +903,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6  col-md-2  ml-md-2 text-center">
-                                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal2" data-backdrop="false"><img src="~/Content/iconos_PopUp/png.png" /></button>
+                                <div class="col-6 col-md-3 text-center">
+                                    <button type="button" class="btn2" data-toggle="modal" data-target="#myModal2" data-backdrop="false"><img class="img-fluid" src="~/Content/img/boton_archivo_exe.png" /></button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="myModal2" role="dialog">
                                         <div class="modal-dialog modal-lg">
@@ -876,9 +961,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-2  ml-md-2 text-center">
-                                    <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="false">
-                                        <img src="~/Content/iconos_PopUp/ppt.png" />
+                                <div class="col-6 col-md-3   text-center">
+                                    <button type="button" class="btn2" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="false">
+                                        <img class="img-fluid" src="~/Content/img/boton_archivo_jpg.png" />
                                     </button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -905,9 +990,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-2 ml-md-2 text-center">
-                                    <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
-                                       <img src="~/Content/iconos_PopUp/xls.png" />
+                                <div class="col-6 col-md-3  text-center">
+                                    <button type="button" class="btn2" data-toggle="modal" data-target="#exampleModalCenter">
+                                        <img class="img-fluid" src="~/Content/img/boton_archivo_ppt.png" />
                                     </button>
 
                                 </div>
@@ -915,104 +1000,133 @@
                         </div>
                     </section>
                     <!--Seccion Iconos descargas-->
-                    <section class="widgets" style="background:#FFF; margin-top:20px;">
-                        <h3 style="padding-left:3%; padding-top:5%;">Fuente</h3>
-
-                        <div style="padding-left:3%;">
-                            <a style="color:blue" href="#"><ion-icon name="return-down-forward-outline"></ion-icon>Ver información de las fuentes</a> <br>
-                            <a style="color:blue" href="#"><ion-icon name="return-down-forward-outline"></ion-icon>Ver información del editor</a>
-
-                            <p>
-                                <strong>Fecha de publicación</strong><br>
-                                @*
-                                    @ViewBag.Resultado.FECHA_PUBLICACION
-                                *@
-                                @ViewBag.ELEMENTO.fecha_publicacion
-                            </p>
-
-                            <p>
-                                <strong>Región</strong><br>
-                             
-                                @ViewBag.ELEMENTO.TERRITORIO.nombre
-                            </p>
-
-                            <p>
-                                <strong>Periodo de estudio</strong><br>
-                             
-                                @ViewBag.ELEMENTO.TEMPORALIDAD.fecha_inicio y @ViewBag.ELEMENTO.TEMPORALIDAD.fecha_termino
-                            </p>
-
-                            <p>
-                                <strong>Grupo de edad</strong><br>
-                 
-                                @ViewBag.ELEMENTO.rango_edad
-                            </p>
-
-                            <p>
-                                <strong>Abrir esta estadística en...</strong><br>
-                                @ViewBag.ELEMENTO.idioma
-                            </p>
+                    <h6 style="padding-left:3%; padding-top:5%; font-family:'MYRIADPRO-REGULAR'; color:black;"><strong>∙</strong> Información</h6>
+                    <section class="widgets1" style="background:#FFF; margin-top:10px; margin-bottom:10px; border-radius:15px; background-color:#f0f3f5; padding-top:5%; padding-bottom:2%;">
+                        <div style="padding-left: 3%;">
+                            <p style="color:black;" href="#"><ion-icon name="return-down-forward-outline"></ion-icon><strong>∙</strong> Ver Información de la Fuente</p>
+                            <p style="color:black;" href="#"><ion-icon name="return-down-forward-outline"></ion-icon><strong>∙</strong> Ver Información del Editor</p>
+                            @*<p>
+                    <strong>Abrir esta estadística en...</strong><br>
+                    @ViewBag.ELEMENTO.idioma
+                </p>
+                            *@
                         </div>
 
                     </section>
+                    <h6 style="padding-left:3%; padding-top:5%; color:black"><strong>∙</strong> Información General</h6>
+                    <section class="widgets2" style="background:#FFF; padding-left:5%; padding-top: 5%; padding-bottom:2%; margin-top:10px; border-radius:15px; background-color:#f0f3f5; ">
+                        <p>
+                            <strong>Publicado: </strong>
+                            @*
+                @ViewBag.Resultado.FECHA_PUBLICACION
+                            *@
+                            @ViewBag.ELEMENTO.fecha_publicacion
+                        </p>
+
+                        <p>
+                            <strong>Región: </strong>
+
+                            @ViewBag.ELEMENTO.TERRITORIO.nombre
+                        </p>
+
+                        <p>
+                            <strong>Periodo de estudio: </strong>
+
+                            @ViewBag.ELEMENTO.TEMPORALIDAD.fecha_inicio y @ViewBag.ELEMENTO.TEMPORALIDAD.fecha_termino
+                        </p>
+
+                        <p>
+                            <strong>Grupo de edad: </strong>
+
+                            @ViewBag.ELEMENTO.rango_edad
+                        </p>
+
+                    </section>
+                    <button type="button" class="btn btn-primary" id="boton" > Más Información</button>
                 </div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+                
             </aside>
         </section>
-        <section class="row widgets" style="background:#fff;">
+        @*Seccion de contenidos*@
+        <section class="container widgets" style="background:#fff;">
+            <h6> <strong>∙</strong> Información similar de este mismo producto</h6>
             <div class="col-md-12 pt-md-3">
-                <p>
-                    @ViewBag.ELEMENTO.descripcion
+                <div class="row" style="border:0.5px solid #808080; border-radius:25px;">
+                    <div class="col-md-3 col-sm-12 mb-0 " style="border:1px solid #808080; border-radius:25px; background-color:#f0f3f5;">
+                        <img style="width:68%;" class="img-fluid rounded mx-auto d-block mt-md-5" src="~/Content/img/portadaPowerBi_DataCLIMA_PlataformaDeAnalisisYMonitoreoDelClima_BELICE.jpg" alt="Alternate Text" />
+                    </div>
+                    <div class="col-md-8 col-sm-12">
 
-                </p>
+                        <p>
+                            <span style="font-size:20px;"><strong> @ViewBag.ELEMENTO.titulo</strong></span><br />
+                            @ViewBag.ELEMENTO.descripcion <br />
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book. It has survived not only five centuries, but also the leap into
+                            electronic typesetting, remaining essentially unchanged. It was popularised in
+                            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                            and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.
+
+                        </p>
+                    </div>
+                </div>
+               
                 <span id="leerMas" style="display:none;">
                    
-                        <strong> @ViewBag.ELEMENTO.descripcion_larga</strong> <br />
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including
+                        versions of Lorem Ipsum.
+                    </p> <br />
 
              
                 </span>
 
-                <button type="button" class="btn btn-primary" id="boton" style="margin-bottom:20px;"> Más Información</button>
+                
             </div>
+
         </section>
 
        
         <!--carrucel-->
         <section class="pt-5 pb-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <strong>MÁS ESTADÍSTICAS SOBRE EL TEMA</strong>
-                        <h4 class="mb-3">
-                            @*Uso de los medios de comunicación en España *@  @ViewBag.ELEMENTO.CATEGORIA.PRODUCTO.SECTOR.nombre en
+                <div class="row ml-1 mr-1" style="border:1px solid #808080; border-radius:10px; background-color:#bf1522;" >
+                    <div class="col-6 col-md-6">
+                        <h6 class="mb-md-2 mt-md-3" style="color:#ffffff;">
+                            @*Uso de los medios de comunicación en España *@<strong>∙</strong> @ViewBag.ELEMENTO.CATEGORIA.PRODUCTO.SECTOR.nombre en
                             @ViewBag.ELEMENTO.TERRITORIO.nombre
-                        </h4>
+                        </h6>
+
                     </div>
-                    <div class="col-6 text-right">
-                        <a class="btn btn-primary mb-3 mr-1" href="#carouselExample" role="button" data-slide="prev">
-                            <i class="fa fa-arrow-left"></i>
+                    <div class="col-6 text-right mt-md-3">
+                        <a class=" mr-1" href="#carouselExample" role="button" data-slide="prev" style="text-decoration: none; background-color: #c6c6c6; padding: 10px 3px 5px 5px;">
+                            <i class="fa fa-arrow-left mb-3" style="color:red; font-size:1.2rem;"></i>
                         </a>
-                        <a class="btn btn-primary mb-3 " href="#carouselExample" role="button" data-slide="next">
-                            <i class="fa fa-arrow-right"></i>
+                        <a  href="#carouselExample" role="button" data-slide="next" style="text-decoration: none; background-color: #c6c6c6; padding: 10px 5px 5px 5px;">
+                            <i class="fa fa-arrow-right mb-3" style="color:red;font-size:1.2rem; "></i>
                         </a>
                     </div>
-                    <div class="container-fluid">
+                </div>
+                    <div class="container-fluid mt-4">
                         <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
                             <div class="carousel-inner row w-100 mx-auto" role="listbox">
                                 <div class="carousel-item col-md-3  active">
                                     <div class="panel panel-default">
-                                        <div class="card">
+                                        <div class="card" style="border:0.5px solid #808080; border-radius:25px; background-color:#ffffff;">
                                             <a href="~/info/index?id=2" style="color:#000;">
 
                                                 <div class="card-body">
-                                                    <img class="img-fluid " alt="100%x280" src="~/Content/iconos_PopUp/bloggif_6050eb8030715.png" />
-                                                    <img class="img-fluid " alt="100%x280" src="~/Content/img/Diseño sin título - copia.png" />
-                                                    <h4 class="card-title">@ViewBag.ELEMENTO.titulo</h4>
-                                                    <p class="card-text"> @ViewBag.ELEMENTO.descripcion</p>
+                                                    <h4 class="card-title text-center mt-md-2">@ViewBag.ELEMENTO.titulo</h4>
+                                                    <img class="img-fluid mx-0 mt-md-2  " alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
+
+                                                    <h5 class="card-text text-center"> @ViewBag.ELEMENTO.descripcion</h5>
 
                                                 </div>
                                             </a>
@@ -1020,18 +1134,16 @@
                                     </div>
                                 </div>
                                 @foreach (var item in ViewBag.listaAsociado)
-                                {
+                                 {
                                     <div class="carousel-item col-md-3">
                                         <div class="panel panel-default">
-                                            <div class="card">
+                                            <div class="card" style="border:0.5px solid #808080; border-radius:25px; background-color:#f2f2f2;">
                                                 @* <a href="~/info/index?id=@ViewBag.Elemento.id" style="color:#000;">*@
                                                 <a href="~/info/index?id=@item.id" style="color:#000;">
-                                                    <img class="img-fluid " alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
-
                                                     <div class="card-body">
-                                                        <h4 class="card-title text-center">@item.titulo</h4>
-                                                        <p class="card-text text-center"> @item.descripcion</p>
-
+                                                        <h4 class="card-title text-center mt-md-2">@item.titulo</h4>
+                                                        <img class="img-fluid mx-0 mt-md-2" alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
+                                                        <h5 class="card-text text-center"> @item.descripcion</h5>
                                                     </div>
                                                 </a>
                                             </div>
@@ -1043,30 +1155,24 @@
 
                         </div>
                     </div>
-                </div>
+                
             </div>
         </section>
 
-        <!--Modal 2-->
-        <div class="container sticky-top" style="background:#007bff; background: linear-gradient(to right, #0062E6, #33AEFF); ">
-            <div class="row">
-                <div class="col-md-9 col-sm-9 text-center m-text-center">
-                    <h5 class="mt-md-3 mb-md-3">
-                        Acceso inmediato e ilimitado a todas las estadísticas por 49 € / mes
-                    </h5>
-                </div>
-                <div class="col-md-3 col-sm-3  text-right mb-md-4">
-                    <a href="#" target="_blank" class="btn btn-white">Precios y Acceso</a>
-                </div>
-            </div>
-        </div>
-
-        <section class=" row pricing py-5 mb-md-5" style="box-sizing: border-box; width: 100%;">
-            <div class="container no-gutters ml-md-5 col-md-12">
-                <div class="row display-block">
+    </div>
+    <!--seccion suscripciones-->
+    <div class="container-fluid px-0">
+        <section class="pricing" style="box-sizing: border-box; width: 100%;">
+            <div class="container" style="border-top: 15px solid #c7c7c5; background: rgba(35,37,78, 0.3);width:80%;">
+                <div class="row display-block align-items-left align-self-end"  >
                     <!-- Free -->
                     <div class="col-lg-3 mt-md-4">
-                        <div class="card mb-5 ">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <img class="mx-0 img-fluid" src="~/Content/img/portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE (2).jpg" alt="Alternate Text" />
+                            </div>
+                        </div>
+                        <div class="card mb-3 ">
                             <div class="card-body">
                                 <h4 class=" text-center">Cuenta Básica</h4>
                                 <h5 class="card-title text-muted text-uppercase text-center">Para conocer Statista</h5>
@@ -1075,14 +1181,21 @@
                                 <input style="background-color:transparent;color:#33AEFF;" type="submit" value="Regístrese gratis" class="button--reset">
                             </div>
                         </div>
+                        <hr style="border:0.5px solid #73777f;" />
                     </div>
                     <!-- Plus-->
-                    <div class="col-lg-5" style=" z-index:1;">
-                        <div class="card mb-5">
+                    <div class="col-lg-6 mb-5" style=" z-index:1;">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <h2 class="text-center" style="color:#fff;">
+                                    Oferta especiales!!!
+                                    <hr style="border:0.5px solid #73777f;" />
+
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="card mt-3">
                             <div class="card-body">
-                                <h4 class="text-center">Cuenta Single</h4>
-                                <h5 class="card-title text-muted text-uppercase text-center">Ideal para acceder a todas las estadísticas</h5>
-                                <hr>
                                 <ul class="fa-ul">
                                     <li><span class="fa-li"><i class="fas fa-check"></i></span><b>Unlimited Users</b> a un millón de estadísticas</li>
                                     <li><span class="fa-li"><i class="fas fa-check"></i></span><b> Descarga</b> en formatos XLS, PDF y PNG</li>
@@ -1097,13 +1210,17 @@
                                         <input type="submit" value="Adquirirla ahora" class="button button--medium button--green whiteSpace--nowrap">
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
+                        <hr style="border:0.5px solid #73777f;" />
                     </div>
                     <!-- Pro -->
                     <div class="col-lg-3 mt-md-4">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <img class="mx-0 img-fluid" src="~/Content/img/portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE (2).jpg" alt="Alternate Text" />
+                            </div>
+                        </div>
                         <div class="card">
                             <div class="card-body ">
                                 <h6 class=" text-center">Cuenta Corporativa</h6>
@@ -1113,70 +1230,63 @@
                                 <input style="background-color:transparent;color:#33AEFF;" type="submit" value="Regístrese gratis" class="button--reset">
                             </div>
                         </div>
+                        <hr style="border:0.5px solid #73777f;" />
                     </div>
                 </div>
             </div>
         </section>
-
+    </div>
+    <!--nav verticar-->
+    <div class="container">
         <!--nav verticar-->
-        <section style="border: 2px double rgba(128, 128, 128, 0.20);">
-            <h4 class="text-center mb-md-5 mt-md-5"><strong>Estadísticas sobre </strong>"El consumo de prensa en España"</h4>
+        <section class="container">
+            <div class="text-left mb-md-5 mt-md-5" style="border:0.5px solid #808080; border-radius:10px; background-color:#bf1522;">
+                <h6 style="color:#ffffff;" class="mb-md-3 mt-md-3"><strong>∙</strong> Información similar de este UN PRODUCTO</h6>
+            </div>
+            @*<h4 class="text-center mb-md-5 mt-md-5"><strong>Estadísticas sobre </strong>"El consumo de prensa en España"</h4>*@
             <div class="row" style="margin-bottom:20px;">
-                <div class="col-10 col-md-3">
+                <div class="col-12 col-md-4">
                     <div class="list-group" id="list-tab" role="tablist">
                         @foreach (var item in ViewBag.listaAsociado)
-                         {
+                        {
                             <a class="list-group-item list-group-item-action" id="list-@item.nombre-list" data-toggle="list" href="#list-@item.nombre" role="tab" aria-controls="@item.nombre" style="color:#000;">@item.nombre</a>
-                         }
+                        }
                         @*
-                             <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" style="color:#000;">Empresas</a>
+                                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" style="color:#000;">Empresas</a>
                         *@
                     </div>
 
                 </div>
                 <div class="col-md-8 ">
-                    <h6 style="color:#000;margin-top:10px;">Las estadísticas más importantes</h6>
-                    <div class="tab-content" id="nav-tabContent">
-                        @foreach (var item in ViewBag.listaAsociado)
-                        {
-                            <div class="tab-pane fade" id="list-@item.nombre" role="tabpanel" aria-labelledby="list-@item.nombre-list">@item.descripcion</div>
-                        }
-                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Las estadísticas más importantes</div>
-                        @*
-                        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">4 Empresas</div>*@
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <h6 style="color:#000;margin-top:10px;"><strong>∙ Información mas relevante</strong></h6>
+                    <div class="row" >
+                        <div class="tab-content col-8"  id="nav-tabContent" >
+                            @foreach (var item in ViewBag.listaAsociado)
+                            { 
+                               
+                                <a href="~/info/index?id=@item.id">
+                                     <div class="row">
+                                        <div class="col-7 tab-pane fade" id="list-@item.nombre" role="tabpanel" aria-labelledby="list-@item.nombre-list" style="border:0.5px solid #808080; border-radius:10px;">
+                                            <img class=" img-fluid mx-0 " style="width:20%;" src="~/Content/img/icono_grafico.png" alt="Alternate Text" />
+                                            @item.descripcion
+                                        </div>
+                                    </div>
+                                </a>
 
-        <section style="border: 2px double rgba(128, 128, 128, 0.20); box-sizing:border-box;  width: 100%;">
-            <!--buscador search bar-->
-            <div class="row justify-content-center mb-5 mt-md-5 text-center" style="background:#fff; ">
-                <div class="col-12 col-md-10 col-lg-8">
-                    <h4 style="color:#424242;margin-bottom:30px;">Descubra Data Intelligence</h4>
-                    <form class="card card-sm">
-                        <div class="card-body row no-gutters align-items-center">
-                            <div class="col-auto">
-                                <i class="h4 text-body"></i>
-                            </div>
-                            <!--end of col-->
-                            <div class="col">
-                                <input class="form-control form-control-lg form-control-borderless" id="myInput" type="text" name="myCountry" placeholder="Encuentre estadísticas, y estudios">
 
-                            </div>
-                            <!--end of col-->
-                            <div class="col-auto">
-                                <button class="btn btn-lg btn-success mb-md-4" type="submit">Search</button>
-                            </div>
-                            <!--end of col-->
+
+                             }
+                              
+                            @*
+                                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">4 Empresas</div>*@
                         </div>
-                    </form>
+                    </div>
+                    
                 </div>
-                <!--end of col-->
             </div>
-
         </section>
-        <!--Seccion con scrollbar-->
+
+        <!--Seccion con scrollbar
         <section style="margin-bottom:100px; background:#F7F9FA">
             <br />
             <br />
@@ -1188,19 +1298,20 @@
 
                     <ul class="list-group mb-md-7" style="list-style:none">
 
-                        @foreach(var item in ViewBag.listaOtrosContenidos) {
-                        <li class="mt-md-3"><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>@item.nombre</li>
+                        @foreach (var item in ViewBag.listaOtrosContenidos)
+                        {
+                            <li class="mt-md-3"><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>@item.nombre</li>
                         }
                         @*
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple primary list group item</li>
-                        
+
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple secondary list group item</li>
-                        
+
                         @for (int i = 0; i < 10; i++)
                         {
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>@i</li>
                         }
-                         *@
+                        *@
                     </ul>
                 </div>
                 <div class="col-md-5">
@@ -1213,7 +1324,7 @@
                         <div class="col-md-9 ml-md-3">
                             <p>
                                 @*
-        @ViewBag.Resultado.TITULO
+                                @ViewBag.Resultado.TITULO
                                 *@
                             </p>
                         </div>
@@ -1222,17 +1333,34 @@
             </div>
 
         </section>
-
-        <!--Seccion de call to action-->
+            -->
+        @* Seccion de buscador*@
         <section class="call-to-action">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-sm-8 text-right m-text-center">
-                        <h5>¿Desea conocer más sobre nuestras soluciones profesionales?</h5>
+                <div class="row ml-1 mr-1">
+                    <div class="col-md-6 col-sm-8 m-text-center" style="background-color:#000;">
+                        <form class="card card-sm" style="background-color:transparent;border:none; width:100% !important;">
+                            <div class="card-body row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <i class="h4 text-body"></i>
+                                </div>
+                                <!--end of col-->
+                                <div style="width:80%;" >
+                                    <input class="form-control form-control-sm form-control-borderless" id="myInput" type="text" name="myCountry" placeholder="Encuentre estadísticas, y estudios">
+
+                                </div>
+                                <!--end of col-->
+                                <div>
+                                    <button class="btn btn-sm btn-success mb-md-4" type="submit">Search</button>
+                                </div>
+                                <!--end of col-->
+                            </div>
+                        </form>
+                        <h5 style="color:#fff;">¿Desea conocer más sobre nuestras soluciones profesionales?</h5>
                         <p id="last">Le enviaremos encantados información detallada sobre nuestra Cuenta Corporativa.</p>
                     </div>
-                    <div class="col-md-4 col-sm-4 m-text-center">
-                        <a href="https://dataintelligence.store/pages/contacto-1" target="_blank" class="btn btn-white">Solicitar Informacion</a>
+                    <div class="col-md-6 col-sm-4" style="background-image: url('/Content/img/ofrecemos_fondo_busqueda.jpg'); background-size: cover;">
+                        <img class="img-fluid pull-right" style="width:50%;" src="~/Content/img/blanco-trans - copia.png" alt="Alternate Text" />
                     </div>
                 </div>
             </div>
