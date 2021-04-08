@@ -267,6 +267,10 @@
     <Content Include="Content\img\atras.png" />
     <Content Include="Content\img\ayuda.png" />
     <Content Include="Content\img\blanco-trans - copia.png" />
+    <Content Include="Content\img\boton_archivo_exe.png" />
+    <Content Include="Content\img\boton_archivo_jpg.png" />
+    <Content Include="Content\img\boton_archivo_pdf.png" />
+    <Content Include="Content\img\boton_archivo_ppt.png" />
     <Content Include="Content\img\Diseño sin título - copia.png" />
     <Content Include="Content\img\Font\OFL.txt" />
     <Content Include="Content\img\home.png" />
@@ -405,6 +409,7 @@
     <Content Include="assets\fonts\fa-solid-900.woff2" />
     <Content Include="Content\Font\Myriad Pro Bold SemiExtended.ttf" />
     <Content Include="Content\Font\Myriad Pro Black.otf" />
+    <Content Include="Content\Font\MyriadRegular.ttf" />
     <Content Include="Content\Font\MYRIADPRO-REGULAR.OTF" />
     <None Include="Properties\PublishProfiles\OdooUtil - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - ReadOnly - FTP.pubxml" />
