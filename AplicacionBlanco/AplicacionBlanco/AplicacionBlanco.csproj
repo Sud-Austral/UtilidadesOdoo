@@ -410,7 +410,6 @@
     <Content Include="assets\fonts\fa-solid-900.woff2" />
     <Content Include="Content\Font\Myriad Pro Bold SemiExtended.ttf" />
     <Content Include="Content\Font\Myriad Pro Black.otf" />
-    <Content Include="Content\Font\MyriadRegular.ttf" />
     <Content Include="Content\Font\MYRIADPRO-REGULAR.OTF" />
     <None Include="Properties\PublishProfiles\OdooUtil - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - ReadOnly - FTP.pubxml" />

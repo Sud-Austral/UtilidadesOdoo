@@ -168,7 +168,7 @@
                     var options = {
                         //title: 'Geomática Agrícola',
                         curveType: 'function',
-                        legend: { position: 'bottom' }
+                        legend: { position: 'bottom' }, 
                     };
                     var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
                     chart.draw(data, options);
@@ -240,7 +240,9 @@
     </style>
 
     <div id="chart_wrap" class="row marca-de-agua ">
-        <div class="col agua " id="curve_chart"></div>
+        <div class="col agua " id="curve_chart">
+           
+        </div>
     </div>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
