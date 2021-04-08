@@ -3,7 +3,10 @@
     font-family: 'SourceSansPro-Bold';
     src: url('../Fonts/source-sans-pro/SourceSansPro-Bold.otf') format('opentype');
 }
-
+@font-face {
+    font-family: 'MYRIADPRO-REGULAR';
+    src: url('Font/MYRIADPRO-REGULAR.OTF') format('opentype');
+}
 
 body {
     overflow-x: hidden;
@@ -48,6 +51,11 @@ aside {
     width: 100%;
     margin-left:1px;
   
+}
+#boton {
+    margin-bottom: 20px;
+    background-color: red;
+    -webkit-border-radius:20px;
 }
 
 footer{
@@ -2391,6 +2399,12 @@ h5 {
 .btn {
     border-radius: 5px;
     margin: 21px 0 0 0;
+    font-weight: 700;
+}
+
+.btn2 {
+    border-radius: 5px;
+    border:none;
     font-weight: 700;
 }
 
