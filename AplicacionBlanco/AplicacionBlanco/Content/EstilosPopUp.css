@@ -2505,7 +2505,7 @@ h5 {
          
     }
 }
-/*
+
 @media (max-width:576px) {
     .marca-de-agua {
         background-image: url('../../Content/iconos_PopUp/bloggif_6050eb8030715.png');
@@ -2516,7 +2516,7 @@ h5 {
 
     }
 }
-    */
+    
 
 /* *****************************************caruosel**********************************************************/
 @media (min-width: 768px) {
@@ -2738,7 +2738,7 @@ h5 {
     z-index: 2;
     cursor: pointer;
 }
-
+/* crea los puntos en el carrusel de cada slide
 .slider__radiobox-label--item {
     bottom: 6%;
     left: 50%;
@@ -2753,6 +2753,7 @@ h5 {
     .slider__radiobox-label--item:hover {
         opacity: 0.5;
     }
+
 
 .slider__radiobox-label--item-1 {
     margin-left: -36px;
@@ -2769,7 +2770,7 @@ h5 {
 .slider__radiobox-label--item-4 {
     margin-left: 36px;
 }
-
+*/
 .slider__radiobox-label--prev, .slider__radiobox-label--next {
     display: none;
     top: 50%;

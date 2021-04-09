@@ -706,8 +706,11 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb" style="background-color:transparent;">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Library</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Pagina actual</li>
+                    <li class="breadcrumb-item"><a href="#">@ViewBag.Elemento.CATEGORIA.PRODUCTO.SECTOR.INDUSTRIA.nombre</a></li>
+                    <li class="breadcrumb-item"><a href="#">@ViewBag.Elemento.CATEGORIA.PRODUCTO.SECTOR.nombre</a></li>
+                    <li class="breadcrumb-item"><a href="#">@ViewBag.Elemento.CATEGORIA.PRODUCTO.nombre</a></li>
+                    <li class="breadcrumb-item"><a href="#">@ViewBag.Elemento.CATEGORIA.nombre</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@ViewBag.Elemento.titulo</li>
                 </ol>
             </nav>
         </div>
@@ -742,9 +745,9 @@
         </div>
 
         <!--descargar pdf iframe-->
-        <button style="cursor: -webkit-grab; cursor: grab; margin-bottom:10px;">Descargar PDF</button>
+        @*<button style="cursor: -webkit-grab; cursor: grab; margin-bottom:10px;">Descargar PDF</button>*@
         <script type="text/javascript">
-            $("button").click(function () {
+            $("#verPdf").click(function () {
                 var myIframe = document.getElementById("inlineFrameExample").contentWindow;
                 myIframe.focus();
                 myIframe.print();
@@ -782,8 +785,17 @@
                     
                     </div>
                     <div class="col-md-1 col-2 text-center mt-2 mb-5 ml-md-1 mr-md-1" style="border-right:1px solid #d9d9d9;">
-                        <a href="#"><span>Ver en Pdf</span></a>  
-                    </div>
+                        <a href="javascript:void(0);">
+                            <span id="verPdf">Ver en Pdf</span></a>
+                            <script type="text/javascript">
+                                $("#verPdf").click(function () {
+                                    var myIframe = document.getElementById("inlineFrameExample").contentWindow;
+                                    myIframe.focus();
+                                    myIframe.print();
+                                    return false;
+                                });
+                            </script>
+</div>
                     <div class="col">
                         <div class="row d-flex">
                             
@@ -1126,7 +1138,12 @@
                                                 <a href="~/info/index?id=@item.id" style="color:#000;">
                                                     <div class="card-body">
                                                         <h4 class="card-title text-center mt-md-2">@item.titulo</h4>
-                                                        <img class="img-fluid mx-0 mt-md-2" alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
+                                                        @*<img class="img-fluid mx-0 mt-md-2" alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">*@
+                                                        @{ 
+                                                            string url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Image/" + item.GetURL();
+                                                            url = url.Replace(".csv", ".png");
+                                                        }
+                                                        <img class="img-fluid mx-0 mt-md-2" alt="100%x280" src="@url">
                                                         <h5 class="card-text text-center"> @item.descripcion</h5>
                                                     </div>
                                                 </a>
