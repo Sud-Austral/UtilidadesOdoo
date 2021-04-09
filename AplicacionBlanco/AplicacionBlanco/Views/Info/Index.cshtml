@@ -43,6 +43,7 @@
 </head>
 
 <body style="font-family: 'MYRIADPRO-REGULAR' " >
+    @*stilos tamaño de texto *@
     <style>
         h6{
             font-size:17px;
@@ -60,6 +61,7 @@
             font-size:17px;
         }
     </style>
+    @*header menu principal*@
     <header style="border:none;">
         <div class="ruby-menu-demo-header row" style="background-color:#000; font-family: 'MYRIADPRO-REGULAR';">
             <!-- COMIENZO: MEGAMENU HORIZONTAL -->
@@ -695,10 +697,26 @@
             <!-- FIN: MEGAMENU HORIZONTAL -->
         </div>
     </header>
-
+    @*contnedor de seccion breadcrums, titulo carrusel pequeñ0,aside, contenido y carrusel grande de graficos *@
     <div class="container mt-5">
+        <style>
+        .breadcrumb-item + .breadcrumb-item::before { content: "∙"; }
+        </style>
         <div class="row">
-            <div class="col-7 align-content-end">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" style="background-color:transparent;">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">@ViewBag.Elemento.CATEGORIA.PRODUCTO.SECTOR.INDUSTRIA.nombre</a></li>
+                    <li class="breadcrumb-item"><a href="#">@ViewBag.Elemento.CATEGORIA.PRODUCTO.SECTOR.nombre</a></li>
+                    <li class="breadcrumb-item"><a href="#">@ViewBag.Elemento.CATEGORIA.PRODUCTO.nombre</a></li>
+                    <li class="breadcrumb-item"><a href="#">@ViewBag.Elemento.CATEGORIA.nombre</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@ViewBag.Elemento.titulo</li>
+                </ol>
+            </nav>
+        </div>
+        @*Titulo y carrusel pequeño*@
+        <div class="row ">
+            <div class="col-md-7 col-12 align-self-center ms-text-center">
                 <h2>@ViewBag.Elemento.titulo</h2>
             </div>
             @*
@@ -706,45 +724,47 @@
                 <h2>@ViewBag.Elemento.titulo</h2>
             </div>
 *@
-            <div class="col-5">
+            <div class="col-md-5 col-12"> 
+                <div class="slider slider--full"> 
+                    <div class="slider__inner">
+                        <input checked type="radio" name="slider__radiobox" id="slider__radiobox--1" class="slider__radiobox slider__radiobox--1"><label for="slider__radiobox--1" class="slider__radiobox-label slider__radiobox-label--item slider__radiobox-label--item-1"></label><label for="slider__radiobox--4" class="slider__radiobox-label slider__radiobox-label--prev slider__radiobox-label--prev-4"></label><label for="slider__radiobox--2" class="slider__radiobox-label slider__radiobox-label--next slider__radiobox-label--next-2"></label>
+                        <input type="radio" name="slider__radiobox" id="slider__radiobox--2" class="slider__radiobox slider__radiobox--2"><label for="slider__radiobox--2" class="slider__radiobox-label slider__radiobox-label--item slider__radiobox-label--item-2"></label><label for="slider__radiobox--1" class="slider__radiobox-label slider__radiobox-label--prev slider__radiobox-label--prev-1"></label><label for="slider__radiobox--3" class="slider__radiobox-label slider__radiobox-label--next slider__radiobox-label--next-3"></label>
+                        <input type="radio" name="slider__radiobox" id="slider__radiobox--3" class="slider__radiobox slider__radiobox--3"><label for="slider__radiobox--3" class="slider__radiobox-label slider__radiobox-label--item slider__radiobox-label--item-3"></label><label for="slider__radiobox--2" class="slider__radiobox-label slider__radiobox-label--prev slider__radiobox-label--prev-2"></label><label for="slider__radiobox--4" class="slider__radiobox-label slider__radiobox-label--next slider__radiobox-label--next-4"></label>
+                        <input type="radio" name="slider__radiobox" id="slider__radiobox--4" class="slider__radiobox slider__radiobox--4"><label for="slider__radiobox--4" class="slider__radiobox-label slider__radiobox-label--item slider__radiobox-label--item-4"></label><label for="slider__radiobox--3" class="slider__radiobox-label slider__radiobox-label--prev slider__radiobox-label--prev-3"></label><label for="slider__radiobox--1" class="slider__radiobox-label slider__radiobox-label--next slider__radiobox-label--next-1"></label>
 
-                @*<h3>@ViewBag.Resultado.TITULO</h3>*@
-                <div id="carouselExample2" class="carousel slide" data-ride="carousel" data-interval="9000">
-                    <div class="carousel-inner  w-50 mx-auto" role="listbox">
-                        <div class="carousel-item   active">
-                            <img class="img-fluid " alt="100%x280" src="~/Content/iconos_PopUp/bloggif_6050eb8030715.png" />
-                        </div>
-                        <div class="carousel-item ">
-                            <img class="img-fluid " alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
+                        <div class="slider__slides">
+                            <div class="slider__slide slider__slide--1 "><img class="img-fluid" alt="Placeholder 100%x280" src="~/Content/img/ICVU.jpeg"></div>
+                            <div class="slider__slide slider__slide--2"><img class="img-fluid" alt="Placeholder 1200x600" src="~/Content/img/portadaPowerBi_DataCLIMA_PlataformaDeAnalisisYMonitoreoDelClima_BELICE.jpg"></div>
+                            <div class="slider__slide slider__slide--3"><img class="img-fluid" alt="Placeholder 300x150" src="~/Content/img/portadaPowerBi_DataCLIMA_PlataformaDeAnalisisYMonitoreoDelClima_BELICE.jpg"></div>
+                            <div class="slider__slide slider__slide--4"><img class="img-fluid" alt="Placeholder 800x400" src="~/Content/img/ImpactosDelHuracanETAenHonduras.jpg"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 text-center " style="max-width:100%">
-                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExample2" role="button" data-slide="prev">
-                        <i class="fa fa-arrow-left"></i>
-                    </a>
-                    <a class="btn btn-primary mb-3 " href="#carouselExample2" role="button" data-slide="next">
-                        <i class="fa fa-arrow-right"></i>
-                    </a>
-                </div>
+
             </div>
         </div>
 
         <!--descargar pdf iframe-->
-        <button style="cursor: -webkit-grab; cursor: grab; margin-bottom:10px;">Descargar PDF</button>
+        @*<button style="cursor: -webkit-grab; cursor: grab; margin-bottom:10px;">Descargar PDF</button>*@
         <script type="text/javascript">
-            $("button").click(function () {
+            $("#verPdf").click(function () {
                 var myIframe = document.getElementById("inlineFrameExample").contentWindow;
                 myIframe.focus();
                 myIframe.print();
                 return false;
             });
         </script>
-     
+     @*seccion iframe grafico*@
         <section class="contenedor-main row">
-            
-            <main class="col-md-7 ml-md-3" style="border:1px solid #808080; border-radius:10px;" >
-                
+            <main class="col-md-7 ml-md-3" style="border:1px solid #e6e6e6; border-radius:10px; border-top:none;" >
+                <div class="row bg-dark mb-2" style="border:1px solid; border-top-left-radius:10px; border-top-right-radius:10px;">
+                    <div class="col-md-1 col-2">
+                        <img class="img-fluid mt-2" src="~/Content/img/Icono_dataIntelligence_Rojo.png" alt="Alternate Text" />
+                    </div>
+                    <div class="col">
+                        <p class="mt-2" style="color:#fff;">@ViewBag.Elemento.titulo</p>
+                    </div>
+                </div>
                 <!--Iframe de grafico-->
                 <iframe id="inlineFrameExample"
                         style="width:100%;height:100%;"
@@ -757,54 +777,37 @@
                         src="@rutaGrafico">
                 </iframe>
                 <div class="row no-gutters" style="color:blue; font-size:10px; ">
-                    <div class="col-md-2 col-2 text-center mt-2 mb-5" style="border-right:1px solid #d9d9d9;">
+                    <div class="col-md-2 col-3 text-center mt-2 mb-5" style="border-right:1px solid #d9d9d9;">
                         <a href="#"><span >Ver información</span></a> 
                     </div>
-                    <div class=" col-md-1 col-1 text-center mt-2 mb-5 ml-md-1 mr-md-1" style="border-right:1px solid #d9d9d9;">
+                    <div class=" col-md-1 col-2 text-center mt-2 mb-5 ml-md-1 mr-md-1" style="border-right:1px solid #d9d9d9;">
                         <a href="#"><span>Ver fuentes</span></a> 
                     
                     </div>
-                    <div class="col-md-1 col-1 text-center mt-2 mb-5 ml-md-1 mr-md-1" style="border-right:1px solid #d9d9d9;">
-                        <a href="#"><span>Ver en Pdf</span></a>  
-                    </div>
+                    <div class="col-md-1 col-2 text-center mt-2 mb-5 ml-md-1 mr-md-1" style="border-right:1px solid #d9d9d9;">
+                        <a href="javascript:void(0);">
+                            <span id="verPdf">Ver en Pdf</span></a>
+                            <script type="text/javascript">
+                                $("#verPdf").click(function () {
+                                    var myIframe = document.getElementById("inlineFrameExample").contentWindow;
+                                    myIframe.focus();
+                                    myIframe.print();
+                                    return false;
+                                });
+                            </script>
+</div>
                     <div class="col">
-                        <div class="row">
-                            <div class="col-6 text-md-right " style="border-right:1px solid #d9d9d9;">
-                                <span style="color:#d9d9d9; font-size:11px;">
-                                    Desarrolado por <br />   
-                                </span>
-                                <span style="color:#d9d9d9; font-size:11px;">
-                                    Data Intelligence Internacional
-                                </span>
-                            </div>
-                            <div class="col-5 mb-1">
-                                <img class="img-fluid pull-right  mx-0" src="~/Content/img/negro-rojo-trans - copia.png" alt="Logo transparente" />
+                        <div class="row d-flex">
+                            
+                            <div class="col-5 mb-1 ml-auto p-2">
+                                <img class="img-fluid " src="~/Content/img/logosDataIntelligence_creadopor.png" alt="Logo transparente" />
                             </div>
                         </div>
                             
                     </div>
                 </div>
-
-
-                @*<div class="row no-gutters" style="color:blue; font-size:12px; ">
-                    <div class="col-md-5 col-12 text-left mt-md-2 mt-0">
-                        <a class="mr-2" href="#"><span>Ver información</span></a><span>|</span><a class="mr-2 ml-2 mb-3" href="#"><span>Ver fuentes</span></a>|<a class="mr-2 ml-2 mb-3" href="#"><span>Ver fuentes</span></a> |
-                    </div>
-                    <div class="col-md-4 col-6  text-right pr-md-2" style="color:#d9d9d9; border-right: 1.5px solid #d9d9d9">
-                        <span>Desarrollado por </span> <br />
-                        <span style="margin-top:-20px;">Data Intelligence International</span>
-                    </div>
-                    <div class="col-md-3 col-6  m-b-5 mb-md-0 text-left">
-                        <img class="img-fluid mx-0 pull-right" style="width:100%;" src="~/Content/img/negro-rojo-trans - copia.png" alt="Alternate Text" />
-                    </div>
-
-
-                </div>
-                *@
-
-
             </main>
-           
+           @*sidde*@
             <aside class="col-md-4 align-self-start" style=" background-color: white">
                 <!--efecto flotante de esta seccion-->
                 <div class="sticky-top" style="z-index:1;">
@@ -812,7 +815,7 @@
                     <section style="background:#fff; border-radius:15px; background-color:#f0f3f5;">
                         <div class="contenedor ">
                             <div class="row d-sm-flex mx-sm-auto" style="padding:10px; margin-bottom:10px;">
-                                <div class=" col-6 col-md-3 text-center ">
+                                <div class=" col-3 col-md-3 text-center ">
                                     <button type="button" class="btn2"  data-toggle="modal" data-target="#myModal" data-backdrop="false"><img class="img-fluid" src="~/Content/img/boton_archivo_pdf.png" /></button>
                                     <!-- Modal -->
                                     <div class="modal " id="myModal" role="dialog">
@@ -903,7 +906,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-3 text-center">
+                                <div class="col-3 col-md-3 text-center">
                                     <button type="button" class="btn2" data-toggle="modal" data-target="#myModal2" data-backdrop="false"><img class="img-fluid" src="~/Content/img/boton_archivo_exe.png" /></button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="myModal2" role="dialog">
@@ -961,7 +964,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-3   text-center">
+                                <div class="col-3 col-md-3   text-center">
                                     <button type="button" class="btn2" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="false">
                                         <img class="img-fluid" src="~/Content/img/boton_archivo_jpg.png" />
                                     </button>
@@ -990,7 +993,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-3  text-center">
+                                <div class="col-3 col-md-3  text-center">
                                     <button type="button" class="btn2" data-toggle="modal" data-target="#exampleModalCenter">
                                         <img class="img-fluid" src="~/Content/img/boton_archivo_ppt.png" />
                                     </button>
@@ -1006,19 +1009,19 @@
                             <p style="color:black;" href="#"><ion-icon name="return-down-forward-outline"></ion-icon><strong>∙</strong> Ver Información de la Fuente</p>
                             <p style="color:black;" href="#"><ion-icon name="return-down-forward-outline"></ion-icon><strong>∙</strong> Ver Información del Editor</p>
                             @*<p>
-                    <strong>Abrir esta estadística en...</strong><br>
-                    @ViewBag.ELEMENTO.idioma
-                </p>
+                                <strong>Abrir esta estadística en...</strong><br>
+                                @ViewBag.ELEMENTO.idioma
+                            </p>
                             *@
                         </div>
 
                     </section>
                     <h6 style="padding-left:3%; padding-top:5%; color:black"><strong>∙</strong> Información General</h6>
-                    <section class="widgets2" style="background:#FFF; padding-left:5%; padding-top: 5%; padding-bottom:2%; margin-top:10px; border-radius:15px; background-color:#f0f3f5; ">
+                    <section class="widgets2 text-right" style="font-size:17px;  background:#FFF;color:black; padding-left:5%; padding-right:30%; padding-top: 5%; padding-bottom:2%; margin-top:10px; border-radius:15px; background-color:#f0f3f5; ">
                         <p>
                             <strong>Publicado: </strong>
                             @*
-                @ViewBag.Resultado.FECHA_PUBLICACION
+                                  @ViewBag.Resultado.FECHA_PUBLICACION
                             *@
                             @ViewBag.ELEMENTO.fecha_publicacion
                         </p>
@@ -1051,22 +1054,18 @@
         <section class="container widgets" style="background:#fff;">
             <h6> <strong>∙</strong> Información similar de este mismo producto</h6>
             <div class="col-md-12 pt-md-3">
-                <div class="row" style="border:0.5px solid #808080; border-radius:25px;">
-                    <div class="col-md-3 col-sm-12 mb-0 " style="border:1px solid #808080; border-radius:25px; background-color:#f0f3f5;">
-                        <img style="width:68%;" class="img-fluid rounded mx-auto d-block mt-md-5" src="~/Content/img/portadaPowerBi_DataCLIMA_PlataformaDeAnalisisYMonitoreoDelClima_BELICE.jpg" alt="Alternate Text" />
+                <div class="row" style="border: 0.5px solid #e6e6e6;border-radius: 25px;">
+                    <div class="col-md-2 col-sm-12" style="border:1px solid #e6e6e6;; border-radius:25px; background-color:#f0f3f5;">
+                        <img style="width:90%;" class="img-fluid rounded mx-auto d-block mt-4 mb-4" src="~/Content/img/portadaPowerBi_DataCLIMA_PlataformaDeAnalisisYMonitoreoDelClima_BELICE.jpg" alt="Alternate Text" />
                     </div>
                     <div class="col-md-8 col-sm-12">
-
-                        <p>
-                            <span style="font-size:20px;"><strong> @ViewBag.ELEMENTO.titulo</strong></span><br />
-                            @ViewBag.ELEMENTO.descripcion <br />
+                        <p style="padding-top:10px;">
+                            <span style="font-size:20px;"><strong> @ViewBag.ELEMENTO.titulo</strong></span> <br />
+                            <span  style="font-size:17px; padding-top:10px;">@ViewBag.ELEMENTO.descripcion </span><br />
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             when an unknown printer took a galley of type and scrambled it to make a type
-                            specimen book. It has survived not only five centuries, but also the leap into
-                            electronic typesetting, remaining essentially unchanged. It was popularised in
-                            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                            and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.
+                            
+                            
 
                         </p>
                     </div>
@@ -1092,25 +1091,22 @@
             </div>
 
         </section>
-
-       
         <!--carrucel-->
         <section class="pt-5 pb-5">
             <div class="container">
-                <div class="row ml-1 mr-1" style="border:1px solid #808080; border-radius:10px; background-color:#bf1522;" >
-                    <div class="col-6 col-md-6">
-                        <h6 class="mb-md-2 mt-md-3" style="color:#ffffff;">
+                <div class="row ml-1 mr-1 " style="border:1px solid rgb(0 0 0 / 0.00); border-radius:10px; background-color:#bf1522;" >
+                    <div class="col-8 col-md-6">
+                        <p class="mt-2" style="color:#ffffff;">
                             @*Uso de los medios de comunicación en España *@<strong>∙</strong> @ViewBag.ELEMENTO.CATEGORIA.PRODUCTO.SECTOR.nombre en
                             @ViewBag.ELEMENTO.TERRITORIO.nombre
-                        </h6>
-
+                        </p>
                     </div>
-                    <div class="col-6 text-right mt-md-3">
-                        <a class=" mr-1" href="#carouselExample" role="button" data-slide="prev" style="text-decoration: none; background-color: #c6c6c6; padding: 10px 3px 5px 5px;">
-                            <i class="fa fa-arrow-left mb-3" style="color:red; font-size:1.2rem;"></i>
+                    <div class="col-4 col-md-6 text-right mt-2 ">
+                        <a class=" mr-1" href="#carouselExample" role="button" data-slide="prev" style="text-decoration: none; background-color: #c6c6c6; padding: 3px 3px 5px 5px;">
+                            <i class="fa fa-arrow-left align-baseline" style="color:red; font-size:0.8rem;"></i>
                         </a>
-                        <a  href="#carouselExample" role="button" data-slide="next" style="text-decoration: none; background-color: #c6c6c6; padding: 10px 5px 5px 5px;">
-                            <i class="fa fa-arrow-right mb-3" style="color:red;font-size:1.2rem; "></i>
+                        <a  href="#carouselExample" role="button" data-slide="next" style="text-decoration: none; background-color: #c6c6c6; padding: 3px 5px 5px 5px;">
+                            <i class="fa fa-arrow-right align-baseline" style="color:red;font-size:0.8rem; "></i>
                         </a>
                     </div>
                 </div>
@@ -1119,7 +1115,7 @@
                             <div class="carousel-inner row w-100 mx-auto" role="listbox">
                                 <div class="carousel-item col-md-3  active">
                                     <div class="panel panel-default">
-                                        <div class="card" style="border:0.5px solid #808080; border-radius:25px; background-color:#ffffff;">
+                                        <div class="card" style="border: 0.5px solid #e6e6e6; border-radius:25px;background-color: #ffffff;">
                                             <a href="~/info/index?id=2" style="color:#000;">
 
                                                 <div class="card-body">
@@ -1137,12 +1133,17 @@
                                  {
                                     <div class="carousel-item col-md-3">
                                         <div class="panel panel-default">
-                                            <div class="card" style="border:0.5px solid #808080; border-radius:25px; background-color:#f2f2f2;">
+                                            <div class="card" style="border:0.5px solid #e6e6e6; border-radius:25px; background-color:#f2f2f2;">
                                                 @* <a href="~/info/index?id=@ViewBag.Elemento.id" style="color:#000;">*@
                                                 <a href="~/info/index?id=@item.id" style="color:#000;">
                                                     <div class="card-body">
                                                         <h4 class="card-title text-center mt-md-2">@item.titulo</h4>
-                                                        <img class="img-fluid mx-0 mt-md-2" alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
+                                                        @*<img class="img-fluid mx-0 mt-md-2" alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">*@
+                                                        @{ 
+                                                            string url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Image/" + item.GetURL();
+                                                            url = url.Replace(".csv", ".png");
+                                                        }
+                                                        <img class="img-fluid mx-0 mt-md-2" alt="100%x280" src="@url">
                                                         <h5 class="card-text text-center"> @item.descripcion</h5>
                                                     </div>
                                                 </a>
@@ -1239,9 +1240,9 @@
     <!--nav verticar-->
     <div class="container">
         <!--nav verticar-->
-        <section class="container">
-            <div class="text-left mb-md-5 mt-md-5" style="border:0.5px solid #808080; border-radius:10px; background-color:#bf1522;">
-                <h6 style="color:#ffffff;" class="mb-md-3 mt-md-3"><strong>∙</strong> Información similar de este UN PRODUCTO</h6>
+        <section class="container mt-4">
+            <div class="text-left mb-md-3" style="border:0.5px solid rgb(0 0 0 / 0.00) ; border-radius:10px; background-color:#bf1522;">
+                <h6 style="color:#ffffff;" class="mb-md-3 mt-md-3 ml-md-2"><strong>∙</strong> Información similar de este UN PRODUCTO</h6>
             </div>
             @*<h4 class="text-center mb-md-5 mt-md-5"><strong>Estadísticas sobre </strong>"El consumo de prensa en España"</h4>*@
             <div class="row" style="margin-bottom:20px;">
@@ -1272,8 +1273,6 @@
                                         </div>
                                     </div>
                                 </a>
-
-
 
                              }
                               
@@ -1366,7 +1365,7 @@
             </div>
         </section>
     </div>
-
+    @*Footer*@
     <footer class="row">
         <div class="col">
             <h4 style="padding-left:50px;">Footer</h4>
