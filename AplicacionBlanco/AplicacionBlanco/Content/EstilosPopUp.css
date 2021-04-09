@@ -2413,8 +2413,9 @@ h5 {
 
 .btn2 {
     border-radius: 5px;
-    border:none;
+    border:transparent;
     font-weight: 700;
+    background-color: transparent;
 }
 
     .btn.btn-white {
