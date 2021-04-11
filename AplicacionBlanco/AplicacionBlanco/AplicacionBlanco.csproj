@@ -326,8 +326,10 @@
     <Content Include="Content\Impacto.css" />
     <Content Include="Content\EstilosPopUp.css" />
     <Content Include="Content\fonts.css" />
+    <Content Include="Content\normalize.min.css" />
     <Content Include="Content\roboto.css" />
     <Content Include="Content\StyleBuscador.css" />
+    <Content Include="Content\StylePagBusqueda.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -341,6 +343,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -430,6 +433,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment-2.10.3.js" />
     <Content Include="Scripts\OcultarBoton.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
@@ -597,6 +601,7 @@
     <Content Include="Views\TURNER\Carga3.cshtml" />
     <Content Include="Views\Grafico\readText.cshtml" />
     <Content Include="Views\Info\Index3.cshtml" />
+    <Content Include="Views\Info\PaginaBusqueda.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

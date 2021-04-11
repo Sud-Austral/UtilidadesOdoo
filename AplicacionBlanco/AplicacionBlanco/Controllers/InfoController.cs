@@ -79,6 +79,10 @@ namespace AplicacionBlanco.Controllers
             ViewBag.Resultado = db.BuscarGrafico(id);
             return View();
         }
+        public ActionResult PaginaBusqueda()
+        {
+            return View();
+        }
 
     }
 }
