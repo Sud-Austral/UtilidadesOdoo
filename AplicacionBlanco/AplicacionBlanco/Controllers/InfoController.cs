@@ -24,6 +24,7 @@ namespace AplicacionBlanco.Controllers
             Graficos db = new Graficos();
             ViewBag.Resultado = null;  //db.BuscarGrafico(id);
 
+            ViewBag.menu = dbGrafico.INDUSTRIA.ToList();
 
             GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
             ViewBag.Elemento = graf;
@@ -86,6 +87,11 @@ namespace AplicacionBlanco.Controllers
 
         public ActionResult HomeBusqueda()
         {
+            return View();
+        }
+        public ActionResult gustavo()
+        {
+            ViewBag.test = dbGrafico.INDUSTRIA.ToList();
             return View();
         }
 
