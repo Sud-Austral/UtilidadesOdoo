@@ -2211,10 +2211,6 @@ span.ruby-c-content {
 }
 /************************fin megamenu***************************************/
 /*Search bar superior*/
-body {
-    margin-top: 20px;
-    background: #eee;
-}
 
 .btn {
     margin-bottom: 5px;
@@ -2270,4 +2266,123 @@ body {
     font-weight: 600;
 }
 
-/*SELECTOR DE FECHA PICKERS*/
+/***************************vista de HomeBusqueda**********************************************/
+/*Section de call to action superior imagen fondo*/
+
+.c2a1 {
+    font-family: 'MYRIADPRO-REGULAR';
+    color: #8d97ad;
+    font-weight: 300;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+    .c2a1 h1, .c2a1 h2, .c2a1 h3, .c2a1 h4, .c2a1 h5, .c2a1 h6 {
+        color: #3e4555;
+    }
+
+
+    .c2a1 .font-weight-medium {
+        font-weight: 500;
+    }
+
+        .c2a1 .btn-danger-gradiant:hover {
+            background: #ff6a5b;
+            background: -webkit-linear-gradient(legacy-direction(to right), #ff6a5b 0%, #ff4d7e 100%);
+            background: -webkit-gradient(linear, left top, right top, from(#ff6a5b), to(#ff4d7e));
+            background: -webkit-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
+            background: -o-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
+            background: linear-gradient(to right, #ff6a5b 0%, #ff4d7e 100%);
+        }
+
+    .c2a1 .btn-sm {
+        padding:2px 25px;
+        font-size: 14px;
+       border-radius:25px;
+    }
+/*titulo seccion palabras claves*/
+#subT h3 {
+    font-family: 'MYRIADPRO-REGULAR';
+    font-weight: 300;
+    color: #106fb8;
+    text-align:center;
+}
+/*parafo seccion palabras clave*/
+#subT p {
+    font-family: 'MYRIADPRO-REGULAR';
+    font-weight: 300;
+    color: #b0b0b0;
+    text-align: center;
+}
+/*Seccion call to action*/
+.call-to-action {
+    padding: 40px 0;
+    margin-bottom: 50px;
+}
+
+h5 {
+    color: #fff;
+    font-family: Arial;
+    font-size: 25px;
+}
+
+#last1 {
+    color: #fff;
+    font-family: Arial;
+    font-size:14px;
+    
+}
+
+    #last1 a {
+        text-decoration: none;
+    }
+
+.btn {
+    border-radius: 5px;
+    margin: 0px 0 0 0;
+    font-weight: 700;
+}
+
+.btn2 {
+    border-radius: 5px;
+    border: transparent;
+    font-weight: 700;
+    background-color: transparent;
+}
+
+.btn.btn-white {
+    background: #fff;
+    color: #666;
+    border-bottom: 4px solid #ddd;
+}
+
+@media (max-width: 768px) {
+    .m-text-center {
+        text-align: center;
+    }
+
+    .call-to-action h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .m-text-center {
+        text-align: center;
+    }
+
+    .call-to-action h1 {
+        font-size: 25px;
+    }
+}
+
+/* ========================================================================*/
+
+/*botones seccion palabras claves*/
+.bClaves .btn-sm {
+    padding: 2px 35px;
+    font-size: 10px;
+    border-radius: 25px;
+    margin: 21px 0 0 0;
+}

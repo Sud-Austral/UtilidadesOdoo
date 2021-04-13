@@ -602,6 +602,8 @@
     <Content Include="Views\Grafico\readText.cshtml" />
     <Content Include="Views\Info\Index3.cshtml" />
     <Content Include="Views\Info\PaginaBusqueda.cshtml" />
+    <Content Include="Views\Shared\_LayoutStatista.cshtml" />
+    <Content Include="Views\Info\HomeBusqueda.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

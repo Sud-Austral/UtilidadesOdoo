@@ -84,5 +84,10 @@ namespace AplicacionBlanco.Controllers
             return View();
         }
 
+        public ActionResult HomeBusqueda()
+        {
+            return View();
+        }
+
     }
 }
