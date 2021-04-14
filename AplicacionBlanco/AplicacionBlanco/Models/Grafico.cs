@@ -15,6 +15,7 @@ namespace AplicacionBlanco.Models
     public partial class GRAFICO
     {
         public int id { get; set; }
+        public object Id { get; internal set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public string titulo { get; set; }

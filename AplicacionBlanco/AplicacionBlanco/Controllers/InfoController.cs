@@ -81,6 +81,7 @@ namespace AplicacionBlanco.Controllers
         }
         public ActionResult PaginaBusqueda()
         {
+            ViewBag.Resultado = dbGrafico.GRAFICO.ToList();
             return View();
         }
 

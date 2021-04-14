@@ -38,5 +38,10 @@ namespace AplicacionBlanco.Models
         public virtual DbSet<TIPO_GRAFICO> TIPO_GRAFICO { get; set; }
         public virtual DbSet<GRAFICO> GRAFICO { get; set; }
         public virtual DbSet<UNIDAD_MEDIDA> UNIDAD_MEDIDA { get; set; }
+
+        internal object Where(Func<object, bool> p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
