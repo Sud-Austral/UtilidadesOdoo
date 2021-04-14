@@ -1,0 +1,34 @@
+--------------------------------------
+|  Estructura del nombre de archivo  |
+--------------------------------------
+
+Obtener el ID de cada campo:
+
+códCategoríaID
+codParámetroID
+codDetalleID
+codTerrotorioID
+codTemporalidadID
+codTipográficoID
+codFuenteID
+codResponsableID
+codUnidadmedidaID
+
+códCategoríaID_códParámetroID_códDetalleID_códTerrotorioID_códTemporalidadID_códTipográficoID_códFuenteID_códResponsableID_códUnidadmedidaID_nombredelarchivo.xlsx
+
+
+100101001_1_1_1_1_1_1_1_1_arándanos de chile 2020.xlsx
+
+
+códCategoríaID, 100101001 = Arándanos
+codParámetroID, 9 = Comercio
+codDetalleID, 1 = Dólares
+codTerrotorioID, 38 = Chile
+codTemporalidadID, 7 = Año 2001
+codTipográficoID, 1 = Gráfico 1
+codFuenteID, 1 = Wikipedia
+codResponsableID, 0
+codUnidadmedidaID, 41 = Kilogramo
+
+
+100101001_9_1_38_7_1_1_0_41_arándanos de Chile 2001.xlsx
