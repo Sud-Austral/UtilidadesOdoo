@@ -26,6 +26,10 @@ namespace AplicacionBlanco.Controllers
 
             ViewBag.menu = dbGrafico.INDUSTRIA.ToList();
 
+            ViewBag.menu2 = dbGrafico.SECTOR.ToList();
+
+            ViewBag.menu3 = dbGrafico.PRODUCTO.ToList();
+
             GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
             ViewBag.Elemento = graf;
 
