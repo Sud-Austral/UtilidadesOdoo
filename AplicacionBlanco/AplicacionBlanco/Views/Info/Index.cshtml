@@ -71,81 +71,75 @@
                 </button>
                 <ul class="ruby-menu"> 
                         <li class="ruby-active-menu-item"><a href="#">Home</a></li>
-                    <li>
-                        <a href="#">Classic</a>
-                        <ul class="">
-                            @foreach (var item in ViewBag.menu)
-                            {
-                                foreach (var item2 in item.SECTOR)
+                        <li>
+                            <a href="#">Classic</a>
+                            <ul class="">
+                                @foreach (var item in ViewBag.menu)
                                 {
-                                    <li>
-                                        @item2.nombre
-                                    </li>
-                                }
+
                                 <li>
                                     <a href="#">@item.nombre</a>
                                     <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-university" aria-hidden="true"></i>3rd Level #1</a>
-                                            <ul>
-                                                <li><a href="#">4th Level #1</a></li>
-                                                <li><a href="#">4th Level #2</a></li>
-                                            </ul>
-                                            <span class="ruby-dropdown-toggle"></span>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i>3rd Level #2</a></li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-users" aria-hidden="true"></i>3rd Level #3</a>
-                                            <ul>
-                                                <li><a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i>4th Level #1</a></li>
-                                                <li><a href="#"><i class="fa fa-print" aria-hidden="true"></i>4th Level #2</a></li>
-                                                <li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>4th Level #3</a></li>
-                                            </ul>
-                                            <span class="ruby-dropdown-toggle"></span>
-                                        </li>
+                                        @foreach (var item2 in ViewBag.menu2)
+                                        {
+
+
+                                            <li>
+                                                <a href="#"><i aria-hidden="true"></i>@item2.nombre</a>
+                                                <ul>
+                                                    @foreach (var item3 in ViewBag.menu3)
+                                                    {
+                                                        <li>
+                                                            <a href="#">@item3.nombre</a>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                                <span class="ruby-dropdown-toggle"></span>
+                                            </li>
+                                        }
                                     </ul>
                                 </li>
-                                @*
-            <li><a href="#">2nd Level #2</a></li>
-            <li>
-                <a href="#">2nd Level #3</a>
-                <ul>
-                    <li>
-                        <a href="#"><i class="fa fa-university" aria-hidden="true"></i>3rd Level #1</a>
-                        <ul>
-                            <li><a href="#">4th Level #1</a></li>
-                            <li><a href="#">4th Level #2</a></li>
-                        </ul>
-                        <span class="ruby-dropdown-toggle"></span>
-                    </li>
-                    <li><a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i>3rd Level #2</a></li>
-                    <li>
-                        <a href="#"><i class="fa fa-users" aria-hidden="true"></i>3rd Level #3</a>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i>4th Level #1</a></li>
-                            <li><a href="#"><i class="fa fa-print" aria-hidden="true"></i>4th Level #2</a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>4th Level #3</a></li>
-                        </ul>
-                        <span class="ruby-dropdown-toggle"></span>
-                    </li>
-                </ul>
-                <span class="ruby-dropdown-toggle"></span>
-            </li>
-            <li class="ruby-open-to-left">
-                <a href="#">2nd Level #4</a>
-                <ul>
-                    <li><a href="#">3rd Level #1</a></li>
-                    <li><a href="#">3rd Level #2</a></li>
-                    <li><a href="#">3rd Level #3</a></li>
-                </ul>
-                <span class="ruby-dropdown-toggle"></span>
-            </li>
-                                *@
+                                    @*
+                <li><a href="#">2nd Level #2</a></li>
+                <li>
+                    <a href="#">2nd Level #3</a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-university" aria-hidden="true"></i>3rd Level #1</a>
+                            <ul>
+                                <li><a href="#">4th Level #1</a></li>
+                                <li><a href="#">4th Level #2</a></li>
+                            </ul>
+                            <span class="ruby-dropdown-toggle"></span>
+                        </li>
+                        <li><a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i>3rd Level #2</a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-users" aria-hidden="true"></i>3rd Level #3</a>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i>4th Level #1</a></li>
+                                <li><a href="#"><i class="fa fa-print" aria-hidden="true"></i>4th Level #2</a></li>
+                                <li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>4th Level #3</a></li>
+                            </ul>
+                            <span class="ruby-dropdown-toggle"></span>
+                        </li>
+                    </ul>
+                    <span class="ruby-dropdown-toggle"></span>
+                </li>
+                <li class="ruby-open-to-left">
+                    <a href="#">2nd Level #4</a>
+                    <ul>
+                        <li><a href="#">3rd Level #1</a></li>
+                        <li><a href="#">3rd Level #2</a></li>
+                        <li><a href="#">3rd Level #3</a></li>
+                    </ul>
+                    <span class="ruby-dropdown-toggle"></span>
+                </li>
+                                    *@
 
-                            }
-                        </ul>
-                        <span class="ruby-dropdown-toggle"></span>
-                    </li>
+                                }
+                            </ul>
+                            <span class="ruby-dropdown-toggle"></span>
+                        </li>
                     }
 
                     <li class="ruby-menu-mega">
