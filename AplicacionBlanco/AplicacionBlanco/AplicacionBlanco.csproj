@@ -152,6 +152,7 @@
     <Compile Include="Controllers\IFRAMEController.cs" />
     <Compile Include="Controllers\InfoController.cs" />
     <Compile Include="Controllers\MonitoreoController.cs" />
+    <Compile Include="Controllers\MostradorController.cs" />
     <Compile Include="Controllers\RedesController.cs" />
     <Compile Include="Controllers\RedireccionController.cs" />
     <Compile Include="Controllers\RRSSController.cs" />
@@ -605,6 +606,7 @@
     <Content Include="Views\Info\PaginaBusqueda.cshtml" />
     <Content Include="Views\Shared\_LayoutStatista.cshtml" />
     <Content Include="Views\Info\HomeBusqueda.cshtml" />
+    <Content Include="Views\Mostrador\Violencia_Genero.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
