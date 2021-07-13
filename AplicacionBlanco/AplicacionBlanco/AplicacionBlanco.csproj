@@ -255,6 +255,7 @@
     <Content Include="Content\fonts\icomoon.svg">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Content\html\mapa.html" />
     <Content Include="Content\iconos_PopUp\bloggif_6050eb8030715.png" />
     <Content Include="Content\iconos_PopUp\Diseño sin título.png" />
     <Content Include="Content\iconos_PopUp\negro-rojo-y-blanco - copia.png" />
@@ -607,6 +608,7 @@
     <Content Include="Views\Shared\_LayoutStatista.cshtml" />
     <Content Include="Views\Info\HomeBusqueda.cshtml" />
     <Content Include="Views\Mostrador\Violencia_Genero.cshtml" />
+    <Content Include="Views\Home\iframe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

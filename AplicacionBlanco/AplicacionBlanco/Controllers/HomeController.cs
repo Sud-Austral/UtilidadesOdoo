@@ -34,6 +34,13 @@ namespace AplicacionBlanco.Controllers
             return View();
         }
 
-        
+        public ActionResult iframe()
+        {
+            ViewBag.Message = "Página de error";
+
+            return View();
+        }
+
+
     }
 }
