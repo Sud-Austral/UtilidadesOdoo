@@ -586,3 +586,4 @@ C:\Users\clent\OneDrive\Escritorio\UtilidadesOdoo\AplicacionBlanco\AplicacionBla
 C:\Users\clent\OneDrive\Escritorio\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.csproj.CopyComplete
 C:\Users\clent\OneDrive\Escritorio\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.dll
 C:\Users\clent\OneDrive\Escritorio\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.pdb
+C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.csproj.AssemblyReference.cache
